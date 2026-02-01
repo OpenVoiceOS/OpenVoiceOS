@@ -1,4 +1,6 @@
 ovos-stt-plugin-server
+ovos-stt-plugin-onnx-asr
+ovos-stt-plugin-sherpa-onnx
 ovos-stt-plugin-whisper
 ovos-stt-plugin-fasterwhisper
 ovos-stt-plugin-vosk
