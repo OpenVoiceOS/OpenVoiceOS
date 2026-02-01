@@ -14,7 +14,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: '3.10'  # Specify the Python version you need
+          python-version: '3.14'  # Specify the Python version you need
           
       - name: Install System Dependencies
         run: |
