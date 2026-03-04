@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-03-04 18:53 UTC_
+_Generated: 2026-03-04 19:09 UTC_
 
 | | Count |
 |---|---:|
@@ -32,7 +32,7 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       are unsatisfiable.
 
       hint: Pre-releases are available for `hivemind-audio-binary-protocol`
-      in the requested range (e.g., 2.1.5a1), but pre-releases weren't enabled
+      in the requested range (e.g., 2.1.5a3), but pre-releases weren't enabled
       (try: `--prerelease=allow`)
 ```
 
@@ -286,9 +286,9 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 
 | Package | Version |
 |---------|---------|
-| `hivemind-audio-binary-protocol` | 2.1.5a1 |
+| `hivemind-audio-binary-protocol` | 2.1.5a3 |
 | `hivemind-bus-client` | 0.4.6a1 |
-| `hivemind-core` | 3.4.1a4 |
+| `hivemind-core` | 4.0.0 |
 | `hivemind-http-protocol` | 0.0.2a2 |
 | `hivemind-plugin-manager` | 0.4.0 |
 | `hivemind-redis-database` | 0.0.2 |
