@@ -274,7 +274,30 @@ If a package is temporarily broken or not ready for testing/stable:
 
 ### Renovate Bot
 
-`renovate.json` configures [Renovate](https://docs.renovatebot.com/) to automatically open pull requests when dependencies for the github actions workflows defined in this repository have new versions available. 
+`renovate.json` configures [Renovate](https://docs.renovatebot.com/) to automatically open pull requests when dependencies for the github actions workflows defined in this repository have new versions available.
+
+### Conflict Report
+
+`report_conflicts.py` inspects the current state of the constraints pipeline and produces [`conflicts.md`](conflicts.md) — a Markdown report covering three categories of issues that need human attention:
+
+| Category | Description |
+|---|---|
+| **Dependency conflicts** | Packages in `lists/unstable.list` excluded from testing due to dependency conflicts. The script re-probes each one against the current `constraints-testing.txt` to detect if the conflict has been fixed upstream. |
+| **Python version restrictions** | Packages present in testing but restricted to older Pythons via a `; python_version < "X.Y"` marker because a transitive dependency lacks wheels for newer versions. |
+| **No stable release** | Packages present in `constraints-alpha.txt` as pre-releases with no stable PyPI release yet, and therefore not in testing. |
+
+#### Running the report locally
+
+```bash
+python report_conflicts.py           # writes conflicts.md and prints to stdout
+python report_conflicts.py out.md    # write to a custom path instead
+```
+
+The script requires at least one venv under `.venvs/` (created by `test_constraints.sh` or `make_alpha_testing.py`) to probe packages with `uv pip install --dry-run`.
+
+#### Automated weekly report
+
+The [Conflict Report workflow](.github/workflows/conflict_report.yml) runs every Monday at 09:00 UTC (and can be triggered manually from the Actions tab) to regenerate `conflicts.md` and commit it. No secrets beyond the default `GITHUB_TOKEN` are needed.
 
 ### Constraints File Format Reference
 
