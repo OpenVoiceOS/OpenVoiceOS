@@ -1,0 +1,10 @@
+hivemind-audio-binary-protocol
+ovos-solver-aiml-plugin
+ovos-solver-rivescript-plugin
+ovos-stt-plugin-whisper-lm
+ovos-tts-plugin-ahotts
+ovos-tts-plugin-cotovia
+ovos-tts-plugin-edge-tts
+ovos-tts-plugin-google-tx
+ovos-tts-plugin-server
+ovos-vad-plugin-noise
