@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-03-04 19:12 UTC_
+_Generated: 2026-03-04 19:31 UTC_
 
 | | Count |
 |---|---:|
@@ -285,7 +285,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-color-parser` | 0.0.9a4 |
 | `ovos-common-query-pipeline-plugin` | 1.1.10a1 |
 | `ovos-config` | 2.1.4a5 |
-| `ovos-core` | 2.1.2a2 |
+| `ovos-core` | 2.1.3a1 |
 | `ovos-date-parser` | 0.7.0a5 |
 | `ovos-ddg-solver-plugin` | 0.0.2a3 |
 | `ovos-dialog-normalizer-plugin` | 0.0.2a2 |
@@ -363,7 +363,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-local-media` | 0.2.13a3 |
 | `ovos-skill-moviemaster` | 0.0.13a1 |
 | `ovos-skill-naptime` | 0.3.16a2 |
-| `ovos-skill-news` | 0.4.6a2 |
+| `ovos-skill-news` | 0.4.6 |
 | `ovos-skill-number-facts` | 0.1.12 |
 | `ovos-skill-parrot` | 0.1.26a3 |
 | `ovos-skill-personal` | 0.1.20a4 |
@@ -532,7 +532,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-local-media` | 0.2.12 |
 | `ovos-skill-moviemaster` | 0.0.12 |
 | `ovos-skill-naptime` | 0.3.15 |
-| `ovos-skill-news` | 0.4.5 |
+| `ovos-skill-news` | 0.4.6 |
 | `ovos-skill-number-facts` | 0.1.12 |
 | `ovos-skill-parrot` | 0.1.25 |
 | `ovos-skill-personal` | 0.1.19 |
