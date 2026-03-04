@@ -1,11 +1,11 @@
 # Package Conflict Report
 
-_Generated: 2026-03-04 18:10 UTC_
+_Generated: 2026-03-04 18:17 UTC_
 
 | | Count |
 |---|---:|
-| ✅ Conflicts resolved — re-run `make_alpha_testing.py` | 0 |
-| ❌ Conflicts still broken | 10 |
+| ✅ Conflicts resolved — re-run `make_alpha_testing.py` | 1 |
+| ❌ Conflicts still broken | 9 |
 | ⚠️ Python version restrictions | 16 |
 | 🔖 Missing stable release on PyPI | 9 |
 
@@ -15,12 +15,18 @@ _Generated: 2026-03-04 18:10 UTC_
 
 Packages in [`lists/unstable.list`](lists/unstable.list) excluded from `constraints-testing.txt`.
 
+### ✅ Resolved — re-run `make_alpha_testing.py` to include
+
+| Package | Would add to testing |
+|---------|----------------------|
+| `ovos-tts-plugin-server` | `ovos-tts-plugin-server>=0.0.5,<1.0.0` |
+
 ### ❌ Still Conflicting — action needed
 
 **`hivemind-audio-binary-protocol>=2.1.5a1`**  
 Would add: `hivemind-audio-binary-protocol>=2.1.3,<3.0.0`
 ```
-Using Python 3.10.19 environment at: .venvs/py3.10
+Using Python 3.10.20 environment at: .venvs/py3.10
   × No solution found when resolving dependencies:
   ╰─▶ Because hivemind-audio-binary-protocol==2.1.3
       depends on hivemind-core>=1.0.0,<4.0.0 and only
@@ -39,7 +45,7 @@ Using Python 3.10.19 environment at: .venvs/py3.10
 **`ovos-solver-aiml-plugin>=0.0.2a2`**  
 Would add: `ovos-solver-aiml-plugin>=0.0.1,<1.0.0`
 ```
-Using Python 3.10.19 environment at: .venvs/py3.10
+Using Python 3.10.20 environment at: .venvs/py3.10
   × No solution found when resolving dependencies:
   ╰─▶ Because only
       ovos-audio-transformer-plugin-speechbrain-langdetect{python_full_version
@@ -67,7 +73,7 @@ Using Python 3.10.19 environment at: .venvs/py3.10
 **`ovos-solver-rivescript-plugin>=0.0.2a2`**  
 Would add: `ovos-solver-rivescript-plugin>=0.0.1,<1.0.0`
 ```
-Using Python 3.10.19 environment at: .venvs/py3.10
+Using Python 3.10.20 environment at: .venvs/py3.10
   × No solution found when resolving dependencies:
   ╰─▶ Because only
       ovos-audio-transformer-plugin-speechbrain-langdetect{python_full_version
@@ -95,7 +101,7 @@ Using Python 3.10.19 environment at: .venvs/py3.10
 **`ovos-stt-plugin-whisper-lm>=0.0.6a4`**  
 Would add: `ovos-stt-plugin-whisper-lm>=0.0.5,<1.0.0`
 ```
-Using Python 3.10.19 environment at: .venvs/py3.10
+Using Python 3.10.20 environment at: .venvs/py3.10
   × No solution found when resolving dependencies:
   ╰─▶ Because only
       ovos-audio-transformer-plugin-speechbrain-langdetect{python_full_version
@@ -123,7 +129,7 @@ Using Python 3.10.19 environment at: .venvs/py3.10
 **`ovos-tts-plugin-ahotts>=0.1.2a2`**  
 Would add: `ovos-tts-plugin-ahotts>=0.1.1,<1.0.0`
 ```
-Using Python 3.10.19 environment at: .venvs/py3.10
+Using Python 3.10.20 environment at: .venvs/py3.10
   × No solution found when resolving dependencies:
   ╰─▶ Because only
       ovos-audio-transformer-plugin-speechbrain-langdetect{python_full_version
@@ -150,7 +156,7 @@ Using Python 3.10.19 environment at: .venvs/py3.10
 **`ovos-tts-plugin-cotovia>=0.4.5a2`**  
 Would add: `ovos-tts-plugin-cotovia>=0.4.3,<1.0.0`
 ```
-Using Python 3.10.19 environment at: .venvs/py3.10
+Using Python 3.10.20 environment at: .venvs/py3.10
   × No solution found when resolving dependencies:
   ╰─▶ Because only
       ovos-audio-transformer-plugin-speechbrain-langdetect{python_full_version
@@ -177,7 +183,7 @@ Using Python 3.10.19 environment at: .venvs/py3.10
 **`ovos-tts-plugin-edge-tts>=0.2.3a1`**  
 Would add: `ovos-tts-plugin-edge-tts>=0.2.2,<1.0.0`
 ```
-Using Python 3.10.19 environment at: .venvs/py3.10
+Using Python 3.10.20 environment at: .venvs/py3.10
   × No solution found when resolving dependencies:
   ╰─▶ Because only
       ovos-audio-transformer-plugin-speechbrain-langdetect{python_full_version
@@ -205,7 +211,7 @@ Using Python 3.10.19 environment at: .venvs/py3.10
 **`ovos-tts-plugin-google-tx>=1.0.4a5`**  
 Would add: `ovos-tts-plugin-google-tx>=1.0.3,<2.0.0`
 ```
-Using Python 3.10.19 environment at: .venvs/py3.10
+Using Python 3.10.20 environment at: .venvs/py3.10
   × No solution found when resolving dependencies:
   ╰─▶ Because only
       ovos-audio-transformer-plugin-speechbrain-langdetect{python_full_version
@@ -230,37 +236,10 @@ Using Python 3.10.19 environment at: .venvs/py3.10
       `--prerelease=allow`)
 ```
 
-**`ovos-tts-plugin-server>=0.0.5a2`**  
-Would add: `ovos-tts-plugin-server>=0.0.4,<1.0.0`
-```
-Using Python 3.10.19 environment at: .venvs/py3.10
-  × No solution found when resolving dependencies:
-  ╰─▶ Because only
-      ovos-audio-transformer-plugin-speechbrain-langdetect{python_full_version
-      < '3.15'}<=0.0.1 is available and
-      ovos-audio-transformer-plugin-speechbrain-langdetect==0.0.1
-      depends on ovos-plugin-manager>=2.1.1, we can conclude that
-      ovos-audio-transformer-plugin-speechbrain-langdetect{python_full_version
-      < '3.15'}>=0.0.1 depends on ovos-plugin-manager>=2.1.1.
-      And because ovos-tts-plugin-server==0.0.4 depends on
-      ovos-plugin-manager>=1.0.0,<2.0.0 and only ovos-tts-plugin-server<=0.0.4
-      is available, we can conclude that ovos-tts-plugin-server>=0.0.4 and
-      ovos-audio-transformer-plugin-speechbrain-langdetect{python_full_version
-      < '3.15'}>=0.0.1 are incompatible.
-      And because you require
-      ovos-audio-transformer-plugin-speechbrain-langdetect{python_full_version
-      < '3.15'}>=0.0.1 and ovos-tts-plugin-server>=0.0.4, we can conclude that
-      your requirements are unsatisfiable.
-
-      hint: Pre-releases are available for `ovos-tts-plugin-server` in the
-      requested range (e.g., 0.0.5a2), but pre-releases weren't enabled (try:
-      `--prerelease=allow`)
-```
-
 **`ovos-vad-plugin-noise>=0.1.3a2`**  
 Would add: `ovos-vad-plugin-noise>=0.1.2,<1.0.0`
 ```
-Using Python 3.10.19 environment at: .venvs/py3.10
+Using Python 3.10.20 environment at: .venvs/py3.10
   × No solution found when resolving dependencies:
   ╰─▶ Because only
       ovos-audio-transformer-plugin-speechbrain-langdetect{python_full_version
