@@ -74,9 +74,9 @@ For example, a [HiveMind](https://github.com/JarbasHiveMind) satellite only need
 
 ## Community & Support
 
-- **Docs**: [openvoiceos.github.io](https://openvoiceos.github.io) *(community wiki)*
-- **Chat**: [Matrix / Element](https://matrix.to/#/#OpenVoiceOS:matrix.org)
-- **Forum**: [GitHub Discussions](https://github.com/OpenVoiceOS/ovos-core/discussions)
+- **Docs**: [ovos-technical-manual](https://openvoiceos.github.io/ovos-technical-manual/)
+- **Chat**: [Matrix / Element](https://matrix.to/#/#openvoiceos:matrix.org)
+- **Forum**: [GitHub Discussions](https://github.com/orgs/OpenVoiceOS/discussions)
 - **Issues**: Open an issue in the relevant component repository
 
 ---
