@@ -154,19 +154,7 @@ def try_add_to_testing(package_spec: str, venv_path: str) -> tuple[bool, str]:
         )
         if result.returncode == 0:
             return True, ""
-        # Extract the ╰─▶ summary line(s) from uv output
-        uv_lines = (result.stderr + result.stdout).splitlines()
-        summary = []
-        capture = False
-        for line in uv_lines:
-            if "╰─▶" in line or capture:
-                capture = True
-                cleaned = re.sub(r"[│╰─▶\s]+", " ", line).strip()
-                if cleaned:
-                    summary.append(cleaned)
-                if len(summary) >= 4:
-                    break
-        return False, " ".join(summary) if summary else "(uv output unavailable)"
+        return False, (result.stderr + result.stdout).strip() or "(uv output unavailable)"
     finally:
         Path(tmp).unlink(missing_ok=True)
 
