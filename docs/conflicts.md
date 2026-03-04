@@ -1,11 +1,11 @@
 # Package Conflict Report
 
-_Generated: 2026-03-04 19:09 UTC_
+_Generated: 2026-03-04 19:11 UTC_
 
 | | Count |
 |---|---:|
-| ✅ Conflicts resolved — re-run `make_alpha_testing.py` | 0 |
-| ❌ Conflicts still broken | 9 |
+| ✅ Conflicts resolved — re-run `make_alpha_testing.py` | 1 |
+| ❌ Conflicts still broken | 8 |
 | ⚠️ Python version restrictions | 2 |
 | 🔖 Missing stable release on PyPI | 9 |
 
@@ -15,26 +15,13 @@ _Generated: 2026-03-04 19:09 UTC_
 
 Packages in [`lists/unstable.list`](lists/unstable.list) excluded from `constraints-testing.txt`.
 
+### ✅ Resolved — re-run `make_alpha_testing.py` to include
+
+| Package | Would add to testing |
+|---------|----------------------|
+| `hivemind-core` | `hivemind-core>=4.0.0,<5.0.0` |
+
 ### ❌ Still Conflicting — action needed
-
-**`hivemind-core>=3.4.1a4`**  
-Would add: `hivemind-core>=4.0.0,<5.0.0`
-```
-Using Python 3.10.20 environment at: .venvs/py3.10
-  × No solution found when resolving dependencies:
-  ╰─▶ Because hivemind-audio-binary-protocol==2.1.3
-      depends on hivemind-core>=1.0.0,<4.0.0 and only
-      hivemind-audio-binary-protocol<=2.1.3 is available, we can
-      conclude that hivemind-audio-binary-protocol>=2.1.3 depends on
-      hivemind-core>=1.0.0,<4.0.0.
-      And because you require hivemind-audio-binary-protocol>=2.1.3 and
-      hivemind-core>=4.0.0,<5.0.0, we can conclude that your requirements
-      are unsatisfiable.
-
-      hint: Pre-releases are available for `hivemind-audio-binary-protocol`
-      in the requested range (e.g., 2.1.5a3), but pre-releases weren't enabled
-      (try: `--prerelease=allow`)
-```
 
 **`ovos-solver-aiml-plugin>=0.0.2a2`**  
 Would add: `ovos-solver-aiml-plugin>=0.0.1,<1.0.0`
@@ -286,7 +273,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 
 | Package | Version |
 |---------|---------|
-| `hivemind-audio-binary-protocol` | 2.1.5a3 |
+| `hivemind-audio-binary-protocol` | 2.1.5 |
 | `hivemind-bus-client` | 0.4.6a1 |
 | `hivemind-core` | 4.0.0 |
 | `hivemind-http-protocol` | 0.0.2a2 |
@@ -461,7 +448,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 
 | Package | Version |
 |---------|---------|
-| `hivemind-audio-binary-protocol` | 2.1.3 |
+| `hivemind-audio-binary-protocol` | 2.1.5 |
 | `hivemind-bus-client` | 0.4.4 |
 | `hivemind-http-protocol` | 0.0.1 |
 | `hivemind-plugin-manager` | 0.4.0 |
