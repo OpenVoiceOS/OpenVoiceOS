@@ -25,6 +25,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+STABLE_FILE = Path("constraints-stable.txt")
 ALPHA_FILE = Path("constraints-alpha.txt")
 TESTING_FILE = Path("constraints-testing.txt")
 UNSTABLE_FILE = Path("lists/unstable.list")
@@ -165,6 +166,26 @@ def first_available_venv() -> str | None:
         if venv.exists():
             return str(venv)
     return None
+
+
+# ---------------------------------------------------------------------------
+# Snapshot resolution
+# ---------------------------------------------------------------------------
+
+def resolve_snapshot(constraints_file: Path, venv_path: str) -> dict[str, str]:
+    """Return {package: version} for every package resolved by uv for constraints_file."""
+    if not constraints_file.exists():
+        return {}
+    result = subprocess.run(
+        ["uv", "pip", "install", "--python", venv_path, "--dry-run", "-r", str(constraints_file)],
+        capture_output=True, text=True,
+    )
+    packages = {}
+    for line in (result.stdout + result.stderr).splitlines():
+        m = re.match(r"^\s*\+\s+([A-Za-z0-9][A-Za-z0-9_\-\.]*)==([^\s]+)", line)
+        if m:
+            packages[normalize_name(m.group(1))] = m.group(2)
+    return packages
 
 
 # ---------------------------------------------------------------------------
@@ -338,6 +359,55 @@ def main():
             note = latest_stable if latest_stable else "—"
             a(f"| `{raw}` | {alpha_min} | {note} |")
     a(f"")
+
+    # --- Section 4: resolved package snapshots ---
+    a(f"---")
+    a(f"")
+    a(f"## 4. Resolved Package Snapshots")
+    a(f"")
+    a(f"Exact versions uv would install for each constraints file (Python {venv.split('py')[-1] if venv else 'unknown'}, transitive deps included).")
+    a(f"")
+
+    snapshot_files = [
+        ("Alpha", ALPHA_FILE, "--prerelease=allow"),
+        ("Testing", TESTING_FILE, None),
+        ("Stable", STABLE_FILE, None),
+    ]
+
+    for label, path, extra_flag in snapshot_files:
+        if not path.exists() or not venv:
+            continue
+
+        # Only show packages explicitly listed in the constraints file
+        listed = load_packages(path)
+
+        cmd = ["uv", "pip", "install", "--python", venv, "--dry-run", "-r", str(path)]
+        if extra_flag:
+            cmd.append(extra_flag)
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        resolved = {}
+        for line in (result.stdout + result.stderr).splitlines():
+            m = re.match(r"^\s*\+\s+([A-Za-z0-9][A-Za-z0-9_\-\.]*)==([^\s]+)", line)
+            if m:
+                resolved[normalize_name(m.group(1))] = m.group(2)
+
+        packages = {norm: resolved[norm] for norm in listed if norm in resolved}
+
+        if not packages:
+            a(f"<details><summary><strong>{label}</strong> — <em>could not resolve</em></summary></details>")
+            a(f"")
+            continue
+
+        a(f"<details>")
+        a(f"<summary><strong>{label}</strong> ({path.name}) — {len(packages)} packages</summary>")
+        a(f"")
+        a(f"| Package | Version |")
+        a(f"|---------|---------|")
+        for pkg in sorted(packages):
+            a(f"| `{pkg}` | {packages[pkg]} |")
+        a(f"")
+        a(f"</details>")
+        a(f"")
 
     output = "\n".join(md)
     print(output)

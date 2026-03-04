@@ -1,0 +1,46 @@
+name: Sync Testing Constraints from Alpha
+
+on:
+  workflow_dispatch:  # Manual trigger only
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Install Python versions and create venvs
+        run: |
+          for py in 3.10 3.11 3.12 3.13 3.14; do
+            uv python install $py
+            uv venv --python $py .venvs/py${py} || echo "Skipping Python $py"
+          done
+
+      - name: Run make_alpha_testing.py
+        run: python make_alpha_testing.py
+
+      - name: Run conflict report
+        run: python report_conflicts.py conflicts.md
+
+      - name: Configure Git
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit results
+        run: |
+          git add constraints-testing.txt lists/unstable.list lists/deprecated.list conflicts.md
+          git diff --staged --quiet || git commit -m "Sync testing constraints from alpha [skip ci]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -103,6 +103,10 @@ This is the smarter, incremental approach. It reads `constraints-alpha.txt` and 
 - **Querying PyPI** for a stable release when both alpha and testing lower bounds are pre-release — if no stable exists the package is skipped.
 - **Adding** new packages that appear in alpha (only if they already have a stable PyPI release).
 
+This script requires at least one venv under `.venvs/` for conflict detection. Create them first with `test_constraints.sh` or let the CI workflow handle it.
+
+> **Via GitHub Actions:** The [Sync Testing Constraints workflow](.github/workflows/make_alpha_testing.yml) can be triggered manually from the Actions tab. It installs Python 3.10–3.14 via `uv`, creates the required venvs, runs the script, runs the conflict report, and commits `constraints-testing.txt`, `lists/unstable.list`, `lists/deprecated.list`, and `conflicts.md` in one step.
+
 #### Step 3 — Validate
 
 ```bash
