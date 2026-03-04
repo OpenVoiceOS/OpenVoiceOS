@@ -1,10 +1,10 @@
 # Package Conflict Report
 
-_Generated: 2026-03-04 19:11 UTC_
+_Generated: 2026-03-04 19:12 UTC_
 
 | | Count |
 |---|---:|
-| ✅ Conflicts resolved — re-run `make_alpha_testing.py` | 1 |
+| ✅ Conflicts resolved — re-run `make_alpha_testing.py` | 0 |
 | ❌ Conflicts still broken | 8 |
 | ⚠️ Python version restrictions | 2 |
 | 🔖 Missing stable release on PyPI | 9 |
@@ -14,12 +14,6 @@ _Generated: 2026-03-04 19:11 UTC_
 ## 1. Dependency Conflicts
 
 Packages in [`lists/unstable.list`](lists/unstable.list) excluded from `constraints-testing.txt`.
-
-### ✅ Resolved — re-run `make_alpha_testing.py` to include
-
-| Package | Would add to testing |
-|---------|----------------------|
-| `hivemind-core` | `hivemind-core>=4.0.0,<5.0.0` |
 
 ### ❌ Still Conflicting — action needed
 
@@ -444,12 +438,13 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 </details>
 
 <details>
-<summary><strong>Testing</strong> (constraints-testing.txt) — 149 packages</summary>
+<summary><strong>Testing</strong> (constraints-testing.txt) — 150 packages</summary>
 
 | Package | Version |
 |---------|---------|
 | `hivemind-audio-binary-protocol` | 2.1.5 |
 | `hivemind-bus-client` | 0.4.4 |
+| `hivemind-core` | 4.0.0 |
 | `hivemind-http-protocol` | 0.0.1 |
 | `hivemind-plugin-manager` | 0.4.0 |
 | `hivemind-redis-database` | 0.0.2 |
