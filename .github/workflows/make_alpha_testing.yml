@@ -30,7 +30,7 @@ jobs:
         run: python make_alpha_testing.py
 
       - name: Run conflict report
-        run: python report_conflicts.py conflicts.md
+        run: python report_conflicts.py docs/conflicts.md
 
       - name: Configure Git
         run: |
@@ -39,7 +39,7 @@ jobs:
 
       - name: Commit results
         run: |
-          git add constraints-testing.txt lists/unstable.list lists/deprecated.list conflicts.md
+          git add constraints-testing.txt lists/unstable.list lists/deprecated.list docs/conflicts.md
           git diff --staged --quiet || git commit -m "Sync testing constraints from alpha [skip ci]"
           git push
         env:

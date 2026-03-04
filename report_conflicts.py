@@ -412,7 +412,7 @@ def main():
     output = "\n".join(md)
     print(output)
 
-    out_path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("conflicts.md")
+    out_path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("docs/conflicts.md")
     out_path.write_text(output)
     print(f"Report written to {out_path}", file=sys.stderr)
 

@@ -29,7 +29,7 @@ jobs:
           done
 
       - name: Generate conflict report
-        run: python report_conflicts.py conflicts.md
+        run: python report_conflicts.py docs/conflicts.md
 
       - name: Configure Git
         run: |
@@ -38,7 +38,7 @@ jobs:
 
       - name: Commit report
         run: |
-          git add conflicts.md
+          git add docs/conflicts.md
           git diff --staged --quiet || git commit -m "Update conflict report [skip ci]"
           git push
         env:

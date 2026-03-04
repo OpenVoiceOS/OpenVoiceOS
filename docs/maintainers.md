@@ -31,7 +31,7 @@ ovos-releases/
 ├── constraints-alpha.txt         # Generated output (do not edit manually)
 ├── constraints-stable.txt        # Generated output (do not edit manually)
 ├── constraints-testing.txt       # Generated output (do not edit manually)
-├── conflicts.md                  # Generated conflict report (do not edit manually)
+├── docs/conflicts.md             # Generated conflict report (do not edit manually)
 └── renovate.json                 # Renovate bot configuration
 ```
 
@@ -105,7 +105,7 @@ This is the smarter, incremental approach. It reads `constraints-alpha.txt` and 
 
 This script requires at least one venv under `.venvs/` for conflict detection. Create them first with `test_constraints.sh` or let the CI workflow handle it.
 
-> **Via GitHub Actions:** The [Sync Testing Constraints workflow](.github/workflows/make_alpha_testing.yml) can be triggered manually from the Actions tab. It installs Python 3.10–3.14 via `uv`, creates the required venvs, runs the script, runs the conflict report, and commits `constraints-testing.txt`, `lists/unstable.list`, `lists/deprecated.list`, and `conflicts.md` in one step.
+> **Via GitHub Actions:** The [Sync Testing Constraints workflow](.github/workflows/make_alpha_testing.yml) can be triggered manually from the Actions tab. It installs Python 3.10–3.14 via `uv`, creates the required venvs, runs the script, runs the conflict report, and commits `constraints-testing.txt`, `lists/unstable.list`, `lists/deprecated.list`, and `docs/conflicts.md` in one step.
 
 #### Step 3 — Validate
 
@@ -148,7 +148,7 @@ git commit -m "Update constraints files"
 
 ### Conflict Report
 
-`report_conflicts.py` inspects the current state of the constraints pipeline and produces [`conflicts.md`](conflicts.md) — a Markdown report covering three categories of issues that need human attention:
+`report_conflicts.py` inspects the current state of the constraints pipeline and produces [`docs/conflicts.md`](conflicts.md) — a Markdown report covering three categories of issues that need human attention:
 
 | Category | Description |
 |---|---|
@@ -159,8 +159,8 @@ git commit -m "Update constraints files"
 #### Running the report locally
 
 ```bash
-python report_conflicts.py           # writes conflicts.md and prints to stdout
-python report_conflicts.py out.md    # write to a custom path instead
+python report_conflicts.py             # writes docs/conflicts.md and prints to stdout
+python report_conflicts.py out.md     # write to a custom path instead
 ```
 
 The script requires at least one venv under `.venvs/` (created by `test_constraints.sh` or `make_alpha_testing.py`) to probe packages with `uv pip install --dry-run`.
