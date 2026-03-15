@@ -138,7 +138,6 @@ ovos-tts-plugin-google-tx>=1.0.4a5
 ovos-tts-plugin-marytts>=0.1.0
 ovos-tts-plugin-matxa-multispeaker-cat>=0.0.1a5
 ovos-tts-plugin-mimic>=0.2.9a2
-ovos-tts-plugin-nos>=0.7.5
 ovos-tts-plugin-pico>=0.0.4a2
 ovos-tts-plugin-piper>=0.2.5
 ovos-tts-plugin-polly>=0.2.3a2
