@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-03-09 09:57 UTC_
+_Generated: 2026-03-16 10:08 UTC_
 
 | | Count |
 |---|---:|
@@ -234,7 +234,7 @@ Present in testing but excluded on newer Python via `; python_version < "X.Y"` m
 
 | Package | Alpha version | Supported | Excluded |
 |---------|:-------------:|-----------|----------|
-| `ovos-tts-plugin-nos` | 0.7.5 | 3.10, 3.11, 3.12, 3.13 | 3.14, 3.15 |
+| `ovos-tts-plugin-nos` |  | 3.10, 3.11, 3.12, 3.13 | 3.14, 3.15 |
 | `ovos-ww-plugin-openwakeword` | 0.4.1 | 3.10, 3.11 | 3.12, 3.13, 3.14, 3.15 |
 
 ---
@@ -263,7 +263,7 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 Exact versions uv would install for each constraints file (Python 3.10, transitive deps included).
 
 <details>
-<summary><strong>Alpha</strong> (constraints-alpha.txt) — 167 packages</summary>
+<summary><strong>Alpha</strong> (constraints-alpha.txt) — 166 packages</summary>
 
 | Package | Version |
 |---------|---------|
@@ -275,7 +275,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `hivemind-redis-database` | 0.0.2 |
 | `hivemind-websocket-protocol` | 0.0.4a1 |
 | `ovos-adapt-parser` | 1.0.9 |
-| `ovos-audio` | 1.1.1 |
+| `ovos-audio` | 1.2.1a1 |
 | `ovos-audio-plugin-mpv` | 0.2.1 |
 | `ovos-audio-plugin-simple` | 0.1.4a3 |
 | `ovos-audio-transformer-plugin-speechbrain-langdetect` | 0.0.0a9 |
@@ -285,11 +285,11 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-color-parser` | 0.0.9a4 |
 | `ovos-common-query-pipeline-plugin` | 1.1.10a1 |
 | `ovos-config` | 2.1.4a5 |
-| `ovos-core` | 2.1.3a2 |
+| `ovos-core` | 2.1.4a2 |
 | `ovos-date-parser` | 0.7.0a5 |
 | `ovos-ddg-solver-plugin` | 0.0.2a3 |
 | `ovos-dialog-normalizer-plugin` | 0.0.2a2 |
-| `ovos-dinkum-listener` | 0.5.1a9 |
+| `ovos-dinkum-listener` | 0.5.1a10 |
 | `ovos-flashrank-reranker-plugin` | 0.0.0 |
 | `ovos-gguf-embeddings-plugin` | 0.0.0 |
 | `ovos-gguf-translate` | 0.0.2a2 |
@@ -337,7 +337,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-plugin-common-play` | 1.3.1 |
 | `ovos-plugin-manager` | 2.2.3a1 |
 | `ovos-plugin-vlc` | 0.0.2 |
-| `ovos-simple-listener` | 0.1.0 |
+| `ovos-simple-listener` | 0.2.0a1 |
 | `ovos-skill-alerts` | 0.1.29a2 |
 | `ovos-skill-application-launcher` | 0.5.15a2 |
 | `ovos-skill-audio-recording` | 0.2.8a4 |
@@ -414,12 +414,11 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-tts-plugin-marytts` | 0.1.0 |
 | `ovos-tts-plugin-matxa-multispeaker-cat` | 0.0.1a5 |
 | `ovos-tts-plugin-mimic` | 0.2.9a2 |
-| `ovos-tts-plugin-nos` | 0.7.5 |
 | `ovos-tts-plugin-pico` | 0.0.4a2 |
 | `ovos-tts-plugin-piper` | 0.2.5 |
 | `ovos-tts-plugin-polly` | 0.2.3a2 |
 | `ovos-tts-plugin-server` | 0.0.5 |
-| `ovos-utils` | 0.8.5a2 |
+| `ovos-utils` | 0.8.5 |
 | `ovos-utterance-corrections-plugin` | 0.1.3a1 |
 | `ovos-utterance-normalizer` | 0.2.4a1 |
 | `ovos-utterance-plugin-cancel` | 0.2.6a1 |
@@ -433,7 +432,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-ww-plugin-precise-onnx` | 0.1.1a2 |
 | `ovos-ww-plugin-vosk` | 0.1.10 |
 | `ovos-yaml-editor` | 0.1.0a3 |
-| `ovoscope` | 0.7.2 |
+| `ovoscope` | 0.13.1 |
 
 </details>
 
@@ -450,7 +449,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `hivemind-redis-database` | 0.0.2 |
 | `hivemind-websocket-protocol` | 0.0.3 |
 | `ovos-adapt-parser` | 1.0.9 |
-| `ovos-audio` | 1.1.1 |
+| `ovos-audio` | 1.2.0 |
 | `ovos-audio-plugin-mpv` | 0.2.1 |
 | `ovos-audio-plugin-simple` | 0.1.3 |
 | `ovos-audio-transformer-plugin-speechbrain-langdetect` | 0.0.1 |
@@ -591,7 +590,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-ww-plugin-precise-onnx` | 0.1.0 |
 | `ovos-ww-plugin-vosk` | 0.1.10 |
 | `ovos-yaml-editor` | 0.0.2 |
-| `ovoscope` | 0.7.2 |
+| `ovoscope` | 0.13.1 |
 
 </details>
 
@@ -696,7 +695,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-stt-plugin-vosk` | 0.2.3 |
 | `ovos-translate-server-plugin` | 0.0.2 |
 | `ovos-tts-plugin-server` | 0.0.2 |
-| `ovos-utils` | 0.8.4 |
+| `ovos-utils` | 0.8.5 |
 | `ovos-utterance-corrections-plugin` | 0.1.2 |
 | `ovos-utterance-normalizer` | 0.2.3 |
 | `ovos-utterance-plugin-cancel` | 0.2.5 |
