@@ -1,5 +1,5 @@
 ovos-adapt-parser>=1.0.9
-ovos-audio>=1.2.0
+ovos-audio>=1.2.1a1
 ovos-audio-plugin-mpv>=0.2.1
 ovos-audio-plugin-simple>=0.1.4a3
 ovos-audio-transformer-plugin-speechbrain-langdetect>=0.0.0a9
