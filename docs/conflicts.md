@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-03-16 10:08 UTC_
+_Generated: 2026-03-23 10:06 UTC_
 
 | | Count |
 |---|---:|
@@ -268,7 +268,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | Package | Version |
 |---------|---------|
 | `hivemind-audio-binary-protocol` | 2.1.5 |
-| `hivemind-bus-client` | 0.4.6a1 |
+| `hivemind-bus-client` | 0.4.6a2 |
 | `hivemind-core` | 4.0.0 |
 | `hivemind-http-protocol` | 0.0.2a2 |
 | `hivemind-plugin-manager` | 0.4.0 |
@@ -335,7 +335,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-phal-plugin-wallpaper-manager` | 0.2.6 |
 | `ovos-phal-plugin-wifi-setup` | 1.1.1a1 |
 | `ovos-plugin-common-play` | 1.3.1 |
-| `ovos-plugin-manager` | 2.2.3a1 |
+| `ovos-plugin-manager` | 2.4.0a1 |
 | `ovos-plugin-vlc` | 0.0.2 |
 | `ovos-simple-listener` | 0.2.0a1 |
 | `ovos-skill-alerts` | 0.1.29a2 |
@@ -354,7 +354,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-dictation` | 0.2.20a4 |
 | `ovos-skill-fallback-unknown` | 0.1.9 |
 | `ovos-skill-fuster-quotes` | 0.0.5a3 |
-| `ovos-skill-hello-world` | 0.2.3a2 |
+| `ovos-skill-hello-world` | 0.2.3a5 |
 | `ovos-skill-homescreen` | 3.0.3 |
 | `ovos-skill-icanhazdadjokes` | 0.3.8a2 |
 | `ovos-skill-ip` | 0.2.8 |
@@ -368,7 +368,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-parrot` | 0.1.26a3 |
 | `ovos-skill-personal` | 0.1.20a5 |
 | `ovos-skill-pyradios` | 0.1.6a1 |
-| `ovos-skill-randomness` | 1.0.0a1 |
+| `ovos-skill-randomness` | 1.0.0a4 |
 | `ovos-skill-screenshot` | 0.0.8a4 |
 | `ovos-skill-somafm` | 0.1.6a4 |
 | `ovos-skill-speedtest` | 0.3.7a3 |
