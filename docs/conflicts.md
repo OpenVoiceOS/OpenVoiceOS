@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-03-30 10:20 UTC_
+_Generated: 2026-04-06 10:12 UTC_
 
 | | Count |
 |---|---:|
@@ -338,48 +338,48 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-plugin-manager` | 2.4.0a1 |
 | `ovos-plugin-vlc` | 0.0.2 |
 | `ovos-simple-listener` | 0.2.0a1 |
-| `ovos-skill-alerts` | 0.1.31a2 |
+| `ovos-skill-alerts` | 0.1.31a3 |
 | `ovos-skill-application-launcher` | 0.5.15a2 |
-| `ovos-skill-audio-recording` | 0.2.10a1 |
-| `ovos-skill-boot-finished` | 0.5.3a1 |
-| `ovos-skill-camera` | 1.0.7a4 |
-| `ovos-skill-cmd` | 0.2.14a1 |
-| `ovos-skill-color-picker` | 0.0.10a1 |
+| `ovos-skill-audio-recording` | 0.2.10a2 |
+| `ovos-skill-boot-finished` | 0.5.3a2 |
+| `ovos-skill-camera` | 1.0.9a1 |
+| `ovos-skill-cmd` | 0.2.14a2 |
+| `ovos-skill-color-picker` | 0.0.10a2 |
 | `ovos-skill-confucius-quotes` | 0.1.14a2 |
-| `ovos-skill-count` | 0.0.3a1 |
-| `ovos-skill-date-time` | 1.1.8a13 |
-| `ovos-skill-days-in-history` | 0.3.12a1 |
+| `ovos-skill-count` | 0.0.3a3 |
+| `ovos-skill-date-time` | 1.1.10a1 |
+| `ovos-skill-days-in-history` | 0.3.12a2 |
 | `ovos-skill-ddg` | 0.3.7a4 |
-| `ovos-skill-diagnostics` | 0.0.9a2 |
+| `ovos-skill-diagnostics` | 0.0.11a2 |
 | `ovos-skill-dictation` | 0.2.20a4 |
-| `ovos-skill-fallback-unknown` | 0.1.9 |
-| `ovos-skill-fuster-quotes` | 0.0.5a3 |
-| `ovos-skill-hello-world` | 0.2.3a5 |
+| `ovos-skill-fallback-unknown` | 0.1.10a1 |
+| `ovos-skill-fuster-quotes` | 0.0.6a2 |
+| `ovos-skill-hello-world` | 0.2.5a1 |
 | `ovos-skill-homescreen` | 3.0.3 |
 | `ovos-skill-icanhazdadjokes` | 0.3.8a2 |
-| `ovos-skill-ip` | 0.2.8 |
+| `ovos-skill-ip` | 0.2.11a1 |
 | `ovos-skill-iss-location` | 0.2.17a4 |
-| `ovos-skill-laugh` | 1.0.4a1 |
-| `ovos-skill-local-media` | 0.2.14a1 |
+| `ovos-skill-laugh` | 1.0.5a4 |
+| `ovos-skill-local-media` | 0.2.14a2 |
 | `ovos-skill-moviemaster` | 0.0.13a1 |
-| `ovos-skill-naptime` | 0.3.16a3 |
+| `ovos-skill-naptime` | 0.3.16a4 |
 | `ovos-skill-news` | 0.4.8a1 |
 | `ovos-skill-number-facts` | 0.1.12 |
 | `ovos-skill-parrot` | 0.1.26a3 |
-| `ovos-skill-personal` | 0.1.21a1 |
+| `ovos-skill-personal` | 0.1.23a1 |
 | `ovos-skill-pyradios` | 0.1.6a1 |
 | `ovos-skill-randomness` | 1.0.0a4 |
-| `ovos-skill-screenshot` | 0.0.8a4 |
-| `ovos-skill-somafm` | 0.1.6a4 |
-| `ovos-skill-speedtest` | 0.3.8a1 |
-| `ovos-skill-spelling` | 0.2.6 |
+| `ovos-skill-screenshot` | 0.0.10a2 |
+| `ovos-skill-somafm` | 0.1.6a8 |
+| `ovos-skill-speedtest` | 0.3.8a2 |
+| `ovos-skill-spelling` | 0.2.7a1 |
 | `ovos-skill-volume` | 0.1.17a6 |
-| `ovos-skill-wallpapers` | 1.0.12a3 |
+| `ovos-skill-wallpapers` | 1.0.14a2 |
 | `ovos-skill-weather` | 1.0.10a1 |
 | `ovos-skill-wikihow` | 0.3.3 |
 | `ovos-skill-wikipedia` | 0.8.14a3 |
 | `ovos-skill-wolfie` | 0.5.9a2 |
-| `ovos-skill-word-of-the-day` | 0.2.4a1 |
+| `ovos-skill-word-of-the-day` | 0.2.4a2 |
 | `ovos-skill-wordnet` | 0.2.7a2 |
 | `ovos-skill-youtube-music` | 0.1.8a1 |
 | `ovos-solver-aiml-plugin` | 0.0.2a2 |
@@ -421,7 +421,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-utils` | 0.8.5 |
 | `ovos-utterance-corrections-plugin` | 0.1.3a1 |
 | `ovos-utterance-normalizer` | 0.2.4a1 |
-| `ovos-utterance-plugin-cancel` | 0.2.6a1 |
+| `ovos-utterance-plugin-cancel` | 0.2.7a1 |
 | `ovos-vad-plugin-noise` | 0.1.3a2 |
 | `ovos-vad-plugin-silero` | 0.1.1a2 |
 | `ovos-vad-plugin-webrtcvad` | 0.0.1 |
