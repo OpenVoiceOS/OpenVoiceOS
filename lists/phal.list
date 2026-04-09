@@ -9,3 +9,4 @@ ovos-PHAL-plugin-mk1
 ovos-PHAL-plugin-wifi-setup
 ovos-PHAL-plugin-hotkeys
 ovos-PHAL-plugin-mk2-fan-control
+#ovos-PHAL-plugin-termux

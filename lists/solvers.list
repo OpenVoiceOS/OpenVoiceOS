@@ -1,10 +1,30 @@
-ovos-wikipedia-solver
-ovos-wolfram-alpha-solver
-ovos-solver-bm25-plugin
-ovos-solver-yes-no-plugin
-ovos_solver_failure_plugin
-ovos-solver-aiml-plugin
-ovos-solver-rivescript-plugin
+# LLM
 ovos-solver-gguf-plugin
-ovos-flashrank-reranker-plugin
+ovos-openai-plugin
+#ovos-claude-plugin
+#ovos-gemini-plugin
+#ovos-opencode-plugin
+#ovos-gemini-plugin
+
+# chat
+ovos-solver-rivescript-plugin
+ovos-solver-aiml-plugin
+ovos_solver_failure_plugin
+
+# knowledge bases
+ovos-wolfram-alpha-solver
+ovos-wikipedia-solver
 ovos-ddg-solver-plugin
+ovos-solver-bm25-plugin
+
+# rerankers
+ovos-flashrank-reranker-plugin
+
+# user utterance parsers
+ovos-option-matcher-fuzzy-plugin
+ovos-yes-no-plugin
+
+# tools / agentic
+ovos-agentic-loop
+#ovos-MoS
+#ovos-tool-adapters

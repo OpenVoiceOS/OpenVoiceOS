@@ -1,1 +1,5 @@
 #ovos-tts-transformer-sox-plugin
+
+# audio super resolution
+#ovos-tts-transformer-FlashSR
+#ovos-tts-transformer-NovaSR

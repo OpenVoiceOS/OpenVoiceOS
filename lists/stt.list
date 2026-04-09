@@ -14,3 +14,5 @@ ovos-stt-plugin-mms
 ovos-stt-plugin-whisper-lm; python_version<='3.12'
 ovos-stt-plugin-azure
 ovos-stt-plugin-whispercpp
+ovos-stt-plugin-rover
+#ovos-stt-plugin-coreml
