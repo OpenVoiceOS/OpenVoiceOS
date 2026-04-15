@@ -168,4 +168,5 @@ hivemind-core>=4.0.1a1
 hivemind-http-protocol>=0.0.2a2
 hivemind-plugin-manager>=0.4.0
 hivemind-redis-database>=0.0.3
+hivemind-sqlite-database>=0.0.4a2
 hivemind-websocket-protocol>=0.0.4a1
