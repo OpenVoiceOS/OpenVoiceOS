@@ -1,5 +1,8 @@
 hivemind-bus-client
 hivemind-core
 hivemind-http-protocol
+hivemind-websocket-protocol
 hivemind-audio-binary-protocol
 hivemind-redis-database
+hivemind-sqlite-database
+json-database
