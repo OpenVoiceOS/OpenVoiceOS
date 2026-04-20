@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-04-13 10:49 UTC_
+_Generated: 2026-04-20 10:52 UTC_
 
 | | Count |
 |---|---:|
@@ -266,7 +266,7 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 Exact versions uv would install for each constraints file (Python 3.10, transitive deps included).
 
 <details>
-<summary><strong>Alpha</strong> (constraints-alpha.txt) — 171 packages</summary>
+<summary><strong>Alpha</strong> (constraints-alpha.txt) — 172 packages</summary>
 
 | Package | Version |
 |---------|---------|
@@ -275,7 +275,8 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `hivemind-core` | 4.0.1a1 |
 | `hivemind-http-protocol` | 0.0.2a2 |
 | `hivemind-plugin-manager` | 0.4.0 |
-| `hivemind-redis-database` | 0.0.2 |
+| `hivemind-redis-database` | 0.0.3 |
+| `hivemind-sqlite-database` | 0.2.1 |
 | `hivemind-websocket-protocol` | 0.0.4a1 |
 | `ovos-adapt-parser` | 1.0.10a2 |
 | `ovos-agentic-loop` | 0.1.0 |
@@ -428,7 +429,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-utils` | 0.8.5 |
 | `ovos-utterance-corrections-plugin` | 0.1.3a1 |
 | `ovos-utterance-normalizer` | 0.2.4a1 |
-| `ovos-utterance-plugin-cancel` | 0.2.7a1 |
+| `ovos-utterance-plugin-cancel` | 0.2.8 |
 | `ovos-vad-plugin-noise` | 0.1.3a2 |
 | `ovos-vad-plugin-silero` | 0.1.1a2 |
 | `ovos-vad-plugin-webrtcvad` | 0.0.1 |
@@ -454,7 +455,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `hivemind-core` | 4.0.0 |
 | `hivemind-http-protocol` | 0.0.1 |
 | `hivemind-plugin-manager` | 0.4.0 |
-| `hivemind-redis-database` | 0.0.2 |
+| `hivemind-redis-database` | 0.0.3 |
 | `hivemind-websocket-protocol` | 0.0.3 |
 | `ovos-adapt-parser` | 1.0.9 |
 | `ovos-audio` | 1.2.0 |
@@ -588,7 +589,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-utils` | 0.8.4 |
 | `ovos-utterance-corrections-plugin` | 0.1.2 |
 | `ovos-utterance-normalizer` | 0.2.3 |
-| `ovos-utterance-plugin-cancel` | 0.2.5 |
+| `ovos-utterance-plugin-cancel` | 0.2.8 |
 | `ovos-vad-plugin-silero` | 0.1.0 |
 | `ovos-vad-plugin-webrtcvad` | 0.0.1 |
 | `ovos-wikipedia-solver` | 0.1.3 |
@@ -706,7 +707,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-utils` | 0.8.5 |
 | `ovos-utterance-corrections-plugin` | 0.1.2 |
 | `ovos-utterance-normalizer` | 0.2.3 |
-| `ovos-utterance-plugin-cancel` | 0.2.5 |
+| `ovos-utterance-plugin-cancel` | 0.2.8 |
 | `ovos-vad-plugin-noise` | 0.1.2 |
 | `ovos-vad-plugin-silero` | 0.0.5 |
 | `ovos-wikipedia-solver` | 0.1.3 |
