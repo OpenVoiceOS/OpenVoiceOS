@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-05-04 11:08 UTC_
+_Generated: 2026-05-11 12:13 UTC_
 
 | | Count |
 |---|---:|
@@ -271,8 +271,8 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | Package | Version |
 |---------|---------|
 | `hivemind-audio-binary-protocol` | 2.1.5 |
-| `hivemind-bus-client` | 0.6.0a1 |
-| `hivemind-core` | 4.0.1a1 |
+| `hivemind-bus-client` | 0.7.0a2 |
+| `hivemind-core` | 4.1.1a1 |
 | `hivemind-http-protocol` | 0.0.2a2 |
 | `hivemind-plugin-manager` | 0.4.0 |
 | `hivemind-redis-database` | 0.0.3 |
@@ -353,7 +353,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-color-picker` | 0.0.10a2 |
 | `ovos-skill-confucius-quotes` | 0.1.14a2 |
 | `ovos-skill-count` | 0.0.3a4 |
-| `ovos-skill-date-time` | 1.1.10a2 |
+| `ovos-skill-date-time` | 1.1.10a4 |
 | `ovos-skill-days-in-history` | 0.3.12a3 |
 | `ovos-skill-ddg` | 0.3.7a4 |
 | `ovos-skill-diagnostics` | 0.0.11a2 |
@@ -365,7 +365,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-icanhazdadjokes` | 0.3.8a2 |
 | `ovos-skill-ip` | 0.2.11a1 |
 | `ovos-skill-iss-location` | 0.2.17a4 |
-| `ovos-skill-laugh` | 1.0.5a6 |
+| `ovos-skill-laugh` | 1.0.5 |
 | `ovos-skill-local-media` | 0.2.14a3 |
 | `ovos-skill-moviemaster` | 0.0.13a1 |
 | `ovos-skill-naptime` | 0.3.16a5 |
@@ -374,7 +374,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-parrot` | 0.1.26a3 |
 | `ovos-skill-personal` | 0.1.23a2 |
 | `ovos-skill-pyradios` | 0.1.6a1 |
-| `ovos-skill-randomness` | 1.0.1a1 |
+| `ovos-skill-randomness` | 1.1.0a1 |
 | `ovos-skill-screenshot` | 0.0.10a2 |
 | `ovos-skill-somafm` | 0.1.6a8 |
 | `ovos-skill-speedtest` | 0.3.8a3 |
@@ -536,7 +536,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-icanhazdadjokes` | 0.3.7 |
 | `ovos-skill-ip` | 0.2.8 |
 | `ovos-skill-iss-location` | 0.2.16 |
-| `ovos-skill-laugh` | 1.0.2 |
+| `ovos-skill-laugh` | 1.0.5 |
 | `ovos-skill-local-media` | 0.2.12 |
 | `ovos-skill-moviemaster` | 0.0.12 |
 | `ovos-skill-naptime` | 0.3.15 |
@@ -545,7 +545,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-parrot` | 0.1.25 |
 | `ovos-skill-personal` | 0.1.19 |
 | `ovos-skill-pyradios` | 0.1.5 |
-| `ovos-skill-randomness` | 0.1.2 |
+| `ovos-skill-randomness` | 1.0.1 |
 | `ovos-skill-screenshot` | 0.0.7 |
 | `ovos-skill-somafm` | 0.1.5 |
 | `ovos-skill-speedtest` | 0.3.6 |
