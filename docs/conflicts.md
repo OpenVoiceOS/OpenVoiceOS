@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-05-11 12:13 UTC_
+_Generated: 2026-05-18 12:35 UTC_
 
 | | Count |
 |---|---:|
@@ -278,7 +278,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `hivemind-redis-database` | 0.0.3 |
 | `hivemind-sqlite-database` | 0.2.1 |
 | `hivemind-websocket-protocol` | 0.0.4a1 |
-| `ovos-adapt-parser` | 1.0.10a2 |
+| `ovos-adapt-parser` | 1.1.0a1 |
 | `ovos-agentic-loop` | 0.1.0 |
 | `ovos-audio` | 1.2.1a1 |
 | `ovos-audio-plugin-mpv` | 0.2.1 |
@@ -326,7 +326,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-ocp-youtube-plugin` | 0.0.7a1 |
 | `ovos-openai-plugin` | 2.0.7a1 |
 | `ovos-option-matcher-fuzzy-plugin` | 0.0.1 |
-| `ovos-padatious` | 1.4.5a2 |
+| `ovos-padatious` | 1.5.0a1 |
 | `ovos-persona` | 0.7.4a4 |
 | `ovos-phal` | 0.2.12 |
 | `ovos-phal-plugin-alsa` | 0.1.6 |
@@ -372,7 +372,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-news` | 0.4.8a1 |
 | `ovos-skill-number-facts` | 0.1.12 |
 | `ovos-skill-parrot` | 0.1.26a3 |
-| `ovos-skill-personal` | 0.1.23a2 |
+| `ovos-skill-personal` | 0.1.23a3 |
 | `ovos-skill-pyradios` | 0.1.6a1 |
 | `ovos-skill-randomness` | 1.1.0a1 |
 | `ovos-skill-screenshot` | 0.0.10a2 |
@@ -380,12 +380,12 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-speedtest` | 0.3.8a3 |
 | `ovos-skill-spelling` | 0.2.7a1 |
 | `ovos-skill-volume` | 0.1.17a6 |
-| `ovos-skill-wallpapers` | 1.0.14a3 |
+| `ovos-skill-wallpapers` | 1.0.14a4 |
 | `ovos-skill-weather` | 1.0.10a1 |
 | `ovos-skill-wikihow` | 0.3.3 |
 | `ovos-skill-wikipedia` | 0.8.14a3 |
 | `ovos-skill-wolfie` | 0.5.9a2 |
-| `ovos-skill-word-of-the-day` | 0.2.4a2 |
+| `ovos-skill-word-of-the-day` | 0.2.5 |
 | `ovos-skill-wordnet` | 0.2.7a2 |
 | `ovos-skill-youtube-music` | 0.1.8a1 |
 | `ovos-solver-aiml-plugin` | 0.0.2a2 |
@@ -441,7 +441,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-ww-plugin-vosk` | 0.1.10 |
 | `ovos-yaml-editor` | 0.1.0a3 |
 | `ovos-yes-no-plugin` | 0.3.1a1 |
-| `ovoscope` | 0.13.1 |
+| `ovoscope` | 0.17.0a1 |
 
 </details>
 
@@ -556,7 +556,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-wikihow` | 0.3.3 |
 | `ovos-skill-wikipedia` | 0.8.13 |
 | `ovos-skill-wolfie` | 0.5.8 |
-| `ovos-skill-word-of-the-day` | 0.2.0 |
+| `ovos-skill-word-of-the-day` | 0.2.5 |
 | `ovos-skill-wordnet` | 0.2.6 |
 | `ovos-skill-youtube-music` | 0.1.7 |
 | `ovos-solver-bm25-plugin` | 0.1.0 |
