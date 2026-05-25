@@ -1,13 +1,13 @@
 # Package Conflict Report
 
-_Generated: 2026-05-18 12:35 UTC_
+_Generated: 2026-05-25 12:34 UTC_
 
 | | Count |
 |---|---:|
 | ✅ Conflicts resolved — re-run `make_alpha_testing.py` | 0 |
 | ❌ Conflicts still broken | 8 |
 | ⚠️ Python version restrictions | 2 |
-| 🔖 Missing stable release on PyPI | 12 |
+| 🔖 Missing stable release on PyPI | 14 |
 
 ---
 
@@ -38,9 +38,7 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-solver-aiml-plugin>=0.0.1, we can conclude that your requirements
       are unsatisfiable.
 
-      hint: Pre-releases are available for `ovos-solver-aiml-plugin` in the
-      requested range (e.g., 0.0.2a2), but pre-releases weren't enabled (try:
-      `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-solver-aiml-plugin` in the requested range (e.g., 0.0.2a2), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
 **`ovos-solver-rivescript-plugin>=0.0.2a2`**  
@@ -64,9 +62,7 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-solver-rivescript-plugin>=0.0.1, we can conclude that your
       requirements are unsatisfiable.
 
-      hint: Pre-releases are available for `ovos-solver-rivescript-plugin` in
-      the requested range (e.g., 0.0.2a2), but pre-releases weren't enabled
-      (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-solver-rivescript-plugin` in the requested range (e.g., 0.0.2a2), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
 **`ovos-stt-plugin-whisper-lm>=0.0.6a4`**  
@@ -90,9 +86,7 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-stt-plugin-whisper-lm>=0.0.5, we can conclude that your
       requirements are unsatisfiable.
 
-      hint: Pre-releases are available for `ovos-stt-plugin-whisper-lm` in the
-      requested range (e.g., 0.0.6a4), but pre-releases weren't enabled (try:
-      `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-stt-plugin-whisper-lm` in the requested range (e.g., 0.0.6a4), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
 **`ovos-tts-plugin-ahotts>=0.1.2a2`**  
@@ -116,9 +110,7 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-tts-plugin-ahotts>=0.1.1, we can conclude that your requirements
       are unsatisfiable.
 
-      hint: Pre-releases are available for `ovos-tts-plugin-ahotts` in the
-      requested range (e.g., 0.1.2a2), but pre-releases weren't enabled (try:
-      `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-tts-plugin-ahotts` in the requested range (e.g., 0.1.2a2), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
 **`ovos-tts-plugin-cotovia>=0.4.5a2`**  
@@ -142,9 +134,7 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-tts-plugin-cotovia>=0.4.3, we can conclude that your requirements
       are unsatisfiable.
 
-      hint: Pre-releases are available for `ovos-tts-plugin-cotovia` in the
-      requested range (e.g., 0.4.5a2), but pre-releases weren't enabled (try:
-      `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-tts-plugin-cotovia` in the requested range (e.g., 0.4.5a2), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
 **`ovos-tts-plugin-edge-tts>=0.2.3a1`**  
@@ -168,9 +158,7 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-tts-plugin-edge-tts>=0.2.2, we can conclude that your requirements
       are unsatisfiable.
 
-      hint: Pre-releases are available for `ovos-tts-plugin-edge-tts` in the
-      requested range (e.g., 0.2.3a1), but pre-releases weren't enabled (try:
-      `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-tts-plugin-edge-tts` in the requested range (e.g., 0.2.3a1), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
 **`ovos-tts-plugin-google-tx>=1.0.4a5`**  
@@ -194,9 +182,7 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-tts-plugin-google-tx>=1.0.3, we can conclude that your requirements
       are unsatisfiable.
 
-      hint: Pre-releases are available for `ovos-tts-plugin-google-tx` in the
-      requested range (e.g., 1.0.4a5), but pre-releases weren't enabled (try:
-      `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-tts-plugin-google-tx` in the requested range (e.g., 1.0.4a5), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
 **`ovos-vad-plugin-noise>=0.1.3a2`**  
@@ -220,9 +206,7 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-vad-plugin-noise>=0.1.2, we can conclude that your requirements
       are unsatisfiable.
 
-      hint: Pre-releases are available for `ovos-vad-plugin-noise` in the
-      requested range (e.g., 0.1.3a2), but pre-releases weren't enabled (try:
-      `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-vad-plugin-noise` in the requested range (e.g., 0.1.3a2), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
 ---
@@ -246,12 +230,14 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 
 | Package | Alpha version | Latest stable |
 |---------|:-------------:|:-------------:|
+| `hivemind-sqlite-database` | 0.3.0a3 | 0.2.1 |
 | `ovos-google-translate-plugin` | 0.0.0a2 | — |
 | `ovos-lang-detector-classics-plugin` | 0.0.1a1 | — |
 | `ovos-media-plugin-mplayer` | 0.1.0a3 | — |
 | `ovos-media-plugin-qt5` | 0.1.0a2 | — |
 | `ovos-media-plugin-simple` | 0.0.2a5 | — |
 | `ovos-media-plugin-vlc` | 0.1.0a4 | — |
+| `ovos-spec-tools` | 0.5.1a1 | — |
 | `ovos-stt-plugin-azure` | 0.0.0a2 | — |
 | `ovos-stt-plugin-rover` | 0.1.0a1 | 0.0.1 |
 | `ovos-transcription-validator-plugin` | 0.1.2a1 | 0.1.0 |
@@ -266,19 +252,19 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 Exact versions uv would install for each constraints file (Python 3.10, transitive deps included).
 
 <details>
-<summary><strong>Alpha</strong> (constraints-alpha.txt) — 172 packages</summary>
+<summary><strong>Alpha</strong> (constraints-alpha.txt) — 173 packages</summary>
 
 | Package | Version |
 |---------|---------|
 | `hivemind-audio-binary-protocol` | 2.1.5 |
-| `hivemind-bus-client` | 0.7.0a2 |
-| `hivemind-core` | 4.1.1a1 |
+| `hivemind-bus-client` | 0.9.0a1 |
+| `hivemind-core` | 4.2.0a3 |
 | `hivemind-http-protocol` | 0.0.2a2 |
-| `hivemind-plugin-manager` | 0.4.0 |
-| `hivemind-redis-database` | 0.0.3 |
-| `hivemind-sqlite-database` | 0.2.1 |
-| `hivemind-websocket-protocol` | 0.0.4a1 |
-| `ovos-adapt-parser` | 1.1.0a1 |
+| `hivemind-plugin-manager` | 0.5.1a1 |
+| `hivemind-redis-database` | 0.0.4a2 |
+| `hivemind-sqlite-database` | 0.3.0a3 |
+| `hivemind-websocket-protocol` | 0.2.0a2 |
+| `ovos-adapt-parser` | 1.3.1a1 |
 | `ovos-agentic-loop` | 0.1.0 |
 | `ovos-audio` | 1.2.1a1 |
 | `ovos-audio-plugin-mpv` | 0.2.1 |
@@ -341,7 +327,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-phal-plugin-wallpaper-manager` | 0.2.6 |
 | `ovos-phal-plugin-wifi-setup` | 1.1.1a1 |
 | `ovos-plugin-common-play` | 1.3.1 |
-| `ovos-plugin-manager` | 2.4.0a1 |
+| `ovos-plugin-manager` | 2.4.0a2 |
 | `ovos-plugin-vlc` | 0.0.2 |
 | `ovos-simple-listener` | 0.2.0a1 |
 | `ovos-skill-alerts` | 0.1.31a4 |
@@ -394,6 +380,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-solver-gguf-plugin` | 0.1.1a2 |
 | `ovos-solver-rivescript-plugin` | 0.0.2a2 |
 | `ovos-solver-yes-no-plugin` | 0.2.9a3 |
+| `ovos-spec-tools` | 0.5.1a1 |
 | `ovos-stt-plugin-azure` | 0.0.0a2 |
 | `ovos-stt-plugin-chromium` | 0.1.2 |
 | `ovos-stt-plugin-citrinet` | 0.1.1a1 |
@@ -426,7 +413,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-tts-plugin-piper` | 0.2.5 |
 | `ovos-tts-plugin-polly` | 0.2.3a2 |
 | `ovos-tts-plugin-server` | 0.0.5 |
-| `ovos-utils` | 0.8.5 |
+| `ovos-utils` | 0.11.0a1 |
 | `ovos-utterance-corrections-plugin` | 0.1.3a1 |
 | `ovos-utterance-normalizer` | 0.2.4a1 |
 | `ovos-utterance-plugin-cancel` | 0.2.8 |
@@ -441,7 +428,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-ww-plugin-vosk` | 0.1.10 |
 | `ovos-yaml-editor` | 0.1.0a3 |
 | `ovos-yes-no-plugin` | 0.3.1a1 |
-| `ovoscope` | 0.17.0a1 |
+| `ovoscope` | 0.17.1a1 |
 
 </details>
 
@@ -454,7 +441,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `hivemind-bus-client` | 0.4.4 |
 | `hivemind-core` | 4.0.0 |
 | `hivemind-http-protocol` | 0.0.1 |
-| `hivemind-plugin-manager` | 0.4.0 |
+| `hivemind-plugin-manager` | 0.5.0 |
 | `hivemind-redis-database` | 0.0.3 |
 | `hivemind-websocket-protocol` | 0.0.3 |
 | `ovos-adapt-parser` | 1.0.9 |
