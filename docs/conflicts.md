@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-05-25 12:34 UTC_
+_Generated: 2026-06-01 15:24 UTC_
 
 | | Count |
 |---|---:|
@@ -237,7 +237,7 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 | `ovos-media-plugin-qt5` | 0.1.0a2 | — |
 | `ovos-media-plugin-simple` | 0.0.2a5 | — |
 | `ovos-media-plugin-vlc` | 0.1.0a4 | — |
-| `ovos-spec-tools` | 0.5.1a1 | — |
+| `ovos-spec-tools` | 0.6.0a1 | — |
 | `ovos-stt-plugin-azure` | 0.0.0a2 | — |
 | `ovos-stt-plugin-rover` | 0.1.0a1 | 0.0.1 |
 | `ovos-transcription-validator-plugin` | 0.1.2a1 | 0.1.0 |
@@ -380,7 +380,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-solver-gguf-plugin` | 0.1.1a2 |
 | `ovos-solver-rivescript-plugin` | 0.0.2a2 |
 | `ovos-solver-yes-no-plugin` | 0.2.9a3 |
-| `ovos-spec-tools` | 0.5.1a1 |
+| `ovos-spec-tools` | 0.6.0a1 |
 | `ovos-stt-plugin-azure` | 0.0.0a2 |
 | `ovos-stt-plugin-chromium` | 0.1.2 |
 | `ovos-stt-plugin-citrinet` | 0.1.1a1 |
@@ -413,10 +413,10 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-tts-plugin-piper` | 0.2.5 |
 | `ovos-tts-plugin-polly` | 0.2.3a2 |
 | `ovos-tts-plugin-server` | 0.0.5 |
-| `ovos-utils` | 0.11.0a1 |
+| `ovos-utils` | 0.11.1a1 |
 | `ovos-utterance-corrections-plugin` | 0.1.3a1 |
 | `ovos-utterance-normalizer` | 0.2.4a1 |
-| `ovos-utterance-plugin-cancel` | 0.2.8 |
+| `ovos-utterance-plugin-cancel` | 0.3.0a1 |
 | `ovos-vad-plugin-noise` | 0.1.3a2 |
 | `ovos-vad-plugin-silero` | 0.1.1a2 |
 | `ovos-vad-plugin-webrtcvad` | 0.0.1 |
