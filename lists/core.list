@@ -11,6 +11,8 @@ ovos-workshop>=7.0.0
 ovos-utils>=0.8.4
 ovos-config
 ovos_bus_client
+ovos-pydantic-models
+ovos-spec-tools
 ovos-number-parser
 ovos-date-parser
 ovos-color-parser

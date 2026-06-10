@@ -5,4 +5,5 @@ hivemind-websocket-protocol
 hivemind-audio-binary-protocol
 hivemind-redis-database
 hivemind-sqlite-database
+hivemind-a2a-agent-plugin
 json-database
