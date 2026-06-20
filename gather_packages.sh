@@ -1,5 +1,6 @@
 uv pip compile --pre \
   lists/core.list \
+  lists/utils.list \
   lists/dialog_transf.list  \
   lists/intent_transf.list  \
   lists/media.list  \
