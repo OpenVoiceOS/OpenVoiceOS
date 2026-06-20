@@ -40,7 +40,7 @@ jobs:
       - name: Commit generated constraints files
         run: |
           git add constraints-alpha.txt
-          git commit -m "Update constraints files"
+          git diff --staged --quiet || git commit -m "Update constraints files [skip ci]"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
