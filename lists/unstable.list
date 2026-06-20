@@ -6,3 +6,5 @@ ovos-tts-plugin-cotovia
 ovos-tts-plugin-edge-tts
 ovos-tts-plugin-google-tx
 ovos-vad-plugin-noise
+ovos-media
+ovos-phal-plugin-tools

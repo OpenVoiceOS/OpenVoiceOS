@@ -4,3 +4,9 @@ ovos-ww-plugin-precise-lite
 ovos-solver-yes-no-plugin
 ovos-PHAL-plugin-wifi-setup
 ovos-gui-plugin-shell-companion
+ovos-gguf-embeddings-plugin
+ovos-media-plugin-qt5
+ovos-stt-plugin-mms
+ovos-stt-plugin-nos
+ovos-tts-plugin-matxa-multispeaker-cat
+ovos-tts-plugin-piper
