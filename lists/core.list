@@ -24,8 +24,6 @@ ovos-gui-api-client
 ovos-hardware-helpers
 ovos-i2c-detection
 ovos-mark1-utils
-ovos-persona-server
 ovos-pydantic-models
 ovos-spec-tools
 ovos-tool-adapters
-ovos-translate-server
