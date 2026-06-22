@@ -1,13 +1,13 @@
 # Package Conflict Report
 
-_Generated: 2026-06-15 15:18 UTC_
+_Generated: 2026-06-22 14:44 UTC_
 
 | | Count |
 |---|---:|
 | ✅ Conflicts resolved — re-run `make_alpha_testing.py` | 0 |
 | ❌ Conflicts still broken | 8 |
 | ⚠️ Python version restrictions | 2 |
-| 🔖 Missing stable release on PyPI | 16 |
+| 🔖 Missing stable release on PyPI | 20 |
 
 ---
 
@@ -17,7 +17,7 @@ Packages in [`lists/unstable.list`](lists/unstable.list) excluded from `constrai
 
 ### ❌ Still Conflicting — action needed
 
-**`ovos-solver-aiml-plugin>=0.0.2a2`**  
+**`ovos-solver-aiml-plugin>=0.0.2a5`**  
 Would add: `ovos-solver-aiml-plugin>=0.0.1,<1.0.0`
 ```
 Using Python 3.10.20 environment at: .venvs/py3.10
@@ -38,7 +38,8 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-solver-aiml-plugin>=0.0.1, we can conclude that your requirements
       are unsatisfiable.
 
-hint: Pre-releases are available for `ovos-solver-aiml-plugin` in the requested range (e.g., 0.0.2a2), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-audio-transformer-plugin-speechbrain-langdetect` in the requested range (e.g., 0.0.2a1), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-solver-aiml-plugin` in the requested range (e.g., 0.0.2a5), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
 **`ovos-solver-rivescript-plugin>=0.0.2a2`**  
@@ -62,10 +63,11 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-solver-rivescript-plugin>=0.0.1, we can conclude that your
       requirements are unsatisfiable.
 
+hint: Pre-releases are available for `ovos-audio-transformer-plugin-speechbrain-langdetect` in the requested range (e.g., 0.0.2a1), but pre-releases weren't enabled (try: `--prerelease=allow`)
 hint: Pre-releases are available for `ovos-solver-rivescript-plugin` in the requested range (e.g., 0.0.2a2), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
-**`ovos-stt-plugin-whisper-lm>=0.0.6a4`**  
+**`ovos-stt-plugin-whisper-lm>=0.0.6a10`**  
 Would add: `ovos-stt-plugin-whisper-lm>=0.0.5,<1.0.0`
 ```
 Using Python 3.10.20 environment at: .venvs/py3.10
@@ -86,10 +88,11 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-stt-plugin-whisper-lm>=0.0.5, we can conclude that your
       requirements are unsatisfiable.
 
-hint: Pre-releases are available for `ovos-stt-plugin-whisper-lm` in the requested range (e.g., 0.0.6a4), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-audio-transformer-plugin-speechbrain-langdetect` in the requested range (e.g., 0.0.2a1), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-stt-plugin-whisper-lm` in the requested range (e.g., 0.0.6a10), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
-**`ovos-tts-plugin-ahotts>=0.1.2a2`**  
+**`ovos-tts-plugin-ahotts>=0.1.2a6`**  
 Would add: `ovos-tts-plugin-ahotts>=0.1.1,<1.0.0`
 ```
 Using Python 3.10.20 environment at: .venvs/py3.10
@@ -110,10 +113,11 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-tts-plugin-ahotts>=0.1.1, we can conclude that your requirements
       are unsatisfiable.
 
-hint: Pre-releases are available for `ovos-tts-plugin-ahotts` in the requested range (e.g., 0.1.2a2), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-audio-transformer-plugin-speechbrain-langdetect` in the requested range (e.g., 0.0.2a1), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-tts-plugin-ahotts` in the requested range (e.g., 0.1.2a6), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
-**`ovos-tts-plugin-cotovia>=0.4.5a2`**  
+**`ovos-tts-plugin-cotovia>=0.4.6a2`**  
 Would add: `ovos-tts-plugin-cotovia>=0.4.3,<1.0.0`
 ```
 Using Python 3.10.20 environment at: .venvs/py3.10
@@ -134,10 +138,11 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-tts-plugin-cotovia>=0.4.3, we can conclude that your requirements
       are unsatisfiable.
 
-hint: Pre-releases are available for `ovos-tts-plugin-cotovia` in the requested range (e.g., 0.4.5a2), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-audio-transformer-plugin-speechbrain-langdetect` in the requested range (e.g., 0.0.2a1), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-tts-plugin-cotovia` in the requested range (e.g., 0.4.6a2), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
-**`ovos-tts-plugin-edge-tts>=0.2.3a1`**  
+**`ovos-tts-plugin-edge-tts>=0.2.3a3`**  
 Would add: `ovos-tts-plugin-edge-tts>=0.2.2,<1.0.0`
 ```
 Using Python 3.10.20 environment at: .venvs/py3.10
@@ -158,10 +163,11 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-tts-plugin-edge-tts>=0.2.2, we can conclude that your requirements
       are unsatisfiable.
 
-hint: Pre-releases are available for `ovos-tts-plugin-edge-tts` in the requested range (e.g., 0.2.3a1), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-audio-transformer-plugin-speechbrain-langdetect` in the requested range (e.g., 0.0.2a1), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-tts-plugin-edge-tts` in the requested range (e.g., 0.2.3a3), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
-**`ovos-tts-plugin-google-tx>=1.0.4a5`**  
+**`ovos-tts-plugin-google-tx>=1.0.5a2`**  
 Would add: `ovos-tts-plugin-google-tx>=1.0.3,<2.0.0`
 ```
 Using Python 3.10.20 environment at: .venvs/py3.10
@@ -182,10 +188,11 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-tts-plugin-google-tx>=1.0.3, we can conclude that your requirements
       are unsatisfiable.
 
-hint: Pre-releases are available for `ovos-tts-plugin-google-tx` in the requested range (e.g., 1.0.4a5), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-audio-transformer-plugin-speechbrain-langdetect` in the requested range (e.g., 0.0.2a1), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-tts-plugin-google-tx` in the requested range (e.g., 1.0.5a2), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
-**`ovos-vad-plugin-noise>=0.1.3a2`**  
+**`ovos-vad-plugin-noise>=0.1.3a6`**  
 Would add: `ovos-vad-plugin-noise>=0.1.2,<1.0.0`
 ```
 Using Python 3.10.20 environment at: .venvs/py3.10
@@ -206,7 +213,8 @@ Using Python 3.10.20 environment at: .venvs/py3.10
       ovos-vad-plugin-noise>=0.1.2, we can conclude that your requirements
       are unsatisfiable.
 
-hint: Pre-releases are available for `ovos-vad-plugin-noise` in the requested range (e.g., 0.1.3a2), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-audio-transformer-plugin-speechbrain-langdetect` in the requested range (e.g., 0.0.2a1), but pre-releases weren't enabled (try: `--prerelease=allow`)
+hint: Pre-releases are available for `ovos-vad-plugin-noise` in the requested range (e.g., 0.1.3a6), but pre-releases weren't enabled (try: `--prerelease=allow`)
 ```
 
 ---
@@ -219,7 +227,7 @@ Present in testing but excluded on newer Python via `; python_version < "X.Y"` m
 | Package | Alpha version | Supported | Excluded |
 |---------|:-------------:|-----------|----------|
 | `ovos-tts-plugin-nos` |  | 3.10, 3.11, 3.12, 3.13 | 3.14, 3.15 |
-| `ovos-ww-plugin-openwakeword` | 0.4.1 | 3.10, 3.11 | 3.12, 3.13, 3.14, 3.15 |
+| `ovos-ww-plugin-openwakeword` | 0.4.5a1 | 3.10, 3.11 | 3.12, 3.13, 3.14, 3.15 |
 
 ---
 
@@ -231,20 +239,24 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 | Package | Alpha version | Latest stable |
 |---------|:-------------:|:-------------:|
 | `hivemind-json-db-plugin` | 0.0.3a2 | 0.0.2 |
+| `hivemind-ovos-agent-plugin` | 0.3.1a1 | 0.1.0 |
 | `hivemind-sqlite-database` | 0.4.0a2 | 0.2.1 |
 | `ovos-agentic-loop` | 0.1.1a1 | 0.1.0 |
-| `ovos-google-translate-plugin` | 0.0.0a2 | — |
+| `ovos-ddg-plugin` | 1.0.0a3 | — |
+| `ovos-google-translate-plugin` | 0.0.3a5 | — |
 | `ovos-lang-detector-classics-plugin` | 0.0.1a1 | — |
-| `ovos-media-plugin-mplayer` | 0.1.0a3 | — |
+| `ovos-media-plugin-mplayer` | 0.1.0a4 | — |
 | `ovos-media-plugin-qt5` | 0.1.0a2 | — |
-| `ovos-media-plugin-simple` | 0.0.2a5 | — |
-| `ovos-media-plugin-vlc` | 0.1.0a4 | — |
+| `ovos-media-plugin-simple` | 0.0.2a6 | — |
+| `ovos-media-plugin-vlc` | 0.1.0a5 | — |
 | `ovos-spec-tools` | 0.8.0a2 | — |
-| `ovos-stt-plugin-azure` | 0.0.0a2 | — |
+| `ovos-stt-plugin-azure` | 0.0.0a3 | — |
 | `ovos-stt-plugin-rover` | 0.1.0a1 | 0.0.1 |
 | `ovos-transcription-validator-plugin` | 0.1.2a1 | 0.1.0 |
-| `ovos-tts-plugin-beepspeak` | 0.0.1a1 | — |
+| `ovos-tts-plugin-beepspeak` | 0.0.2a1 | — |
 | `ovos-tts-plugin-matxa-multispeaker-cat` | 0.0.1a5 | — |
+| `ovos-wikipedia-plugin` | 1.0.0a2 | — |
+| `ovos-wolfram-alpha-plugin` | 1.0.0a2 | — |
 | `ovos-yes-no-plugin` | 0.3.1a1 | 0.3.0 |
 
 ---
@@ -254,181 +266,183 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 Exact versions uv would install for each constraints file (Python 3.10, transitive deps included).
 
 <details>
-<summary><strong>Alpha</strong> (constraints-alpha.txt) — 174 packages</summary>
+<summary><strong>Alpha</strong> (constraints-alpha.txt) — 176 packages</summary>
 
 | Package | Version |
 |---------|---------|
-| `hivemind-audio-binary-protocol` | 2.1.6a1 |
-| `hivemind-bus-client` | 0.9.1a1 |
-| `hivemind-core` | 4.6.1a1 |
+| `hivemind-audio-binary-protocol` | 2.1.6a2 |
+| `hivemind-bus-client` | 0.9.2a1 |
+| `hivemind-core` | 4.6.3a1 |
 | `hivemind-http-protocol` | 0.0.3a1 |
 | `hivemind-json-db-plugin` | 0.0.3a2 |
-| `hivemind-plugin-manager` | 0.7.1a1 |
+| `hivemind-ovos-agent-plugin` | 0.3.1a1 |
+| `hivemind-plugin-manager` | 0.7.1a2 |
 | `hivemind-redis-database` | 0.1.0a2 |
 | `hivemind-sqlite-database` | 0.4.0a2 |
 | `hivemind-websocket-protocol` | 0.2.1a1 |
 | `ovos-adapt-parser` | 1.3.1a1 |
 | `ovos-agentic-loop` | 0.1.1a1 |
-| `ovos-audio` | 1.2.2a1 |
+| `ovos-audio` | 1.2.3a1 |
 | `ovos-audio-plugin-mpv` | 0.2.1 |
 | `ovos-audio-plugin-simple` | 0.1.4a3 |
-| `ovos-audio-transformer-plugin-speechbrain-langdetect` | 0.0.0a9 |
-| `ovos-bidirectional-translation-plugin` | 0.1.3a2 |
-| `ovos-bus-client` | 1.5.0 |
-| `ovos-chromadb-embeddings-plugin` | 0.0.0 |
+| `ovos-audio-transformer-plugin-speechbrain-langdetect` | 0.0.2a1 |
+| `ovos-bidirectional-translation-plugin` | 0.1.3a4 |
+| `ovos-bus-client` | 2.1.1a1 |
+| `ovos-chromadb-embeddings-plugin` | 0.3.0a4 |
 | `ovos-color-parser` | 0.0.9a4 |
-| `ovos-common-query-pipeline-plugin` | 1.1.10a1 |
+| `ovos-common-query-pipeline-plugin` | 1.1.12a5 |
 | `ovos-config` | 2.1.4a5 |
-| `ovos-core` | 2.1.5a1 |
+| `ovos-core` | 2.1.6a1 |
 | `ovos-date-parser` | 0.7.0a5 |
+| `ovos-ddg-plugin` | 1.0.0a3 |
 | `ovos-ddg-solver-plugin` | 0.0.2a3 |
-| `ovos-dialog-normalizer-plugin` | 0.0.2a2 |
-| `ovos-dinkum-listener` | 0.6.0a1 |
+| `ovos-dialog-normalizer-plugin` | 0.0.3a1 |
+| `ovos-dinkum-listener` | 0.7.2a1 |
 | `ovos-flashrank-reranker-plugin` | 0.0.0 |
 | `ovos-gguf-embeddings-plugin` | 0.0.0 |
 | `ovos-gguf-translate` | 0.0.2a2 |
-| `ovos-google-translate-plugin` | 0.0.0a2 |
-| `ovos-gui` | 1.3.5a2 |
-| `ovos-gui-plugin-shell-companion` | 1.0.7a1 |
+| `ovos-google-translate-plugin` | 0.0.3a5 |
+| `ovos-gui` | 1.3.7a3 |
 | `ovos-i2c-detection` | 0.0.6a2 |
 | `ovos-lang-detector-classics-plugin` | 0.0.1a1 |
-| `ovos-lang-detector-fasttext-plugin` | 0.1.2 |
+| `ovos-lang-detector-fasttext-plugin` | 0.1.3a3 |
 | `ovos-lang-parser` | 0.0.3a3 |
 | `ovos-m2v-pipeline` | 0.0.10a1 |
 | `ovos-mark1-utils` | 0.0.1 |
-| `ovos-media-plugin-chromecast` | 0.1.4a2 |
-| `ovos-media-plugin-mplayer` | 0.1.0a3 |
+| `ovos-media-plugin-chromecast` | 0.1.4a8 |
+| `ovos-media-plugin-mplayer` | 0.1.0a4 |
 | `ovos-media-plugin-qt5` | 0.1.0a2 |
-| `ovos-media-plugin-simple` | 0.0.2a5 |
-| `ovos-media-plugin-spotify` | 0.2.8a1 |
-| `ovos-media-plugin-vlc` | 0.1.0a4 |
-| `ovos-messagebus` | 0.0.11a3 |
-| `ovos-microphone-plugin-alsa` | 0.1.4a1 |
-| `ovos-microphone-plugin-files` | 0.0.2a4 |
-| `ovos-microphone-plugin-sounddevice` | 0.0.3a4 |
+| `ovos-media-plugin-simple` | 0.0.2a6 |
+| `ovos-media-plugin-spotify` | 0.2.8a5 |
+| `ovos-media-plugin-vlc` | 0.1.0a5 |
+| `ovos-messagebus` | 0.0.13a2 |
+| `ovos-microphone-plugin-alsa` | 0.1.4a5 |
+| `ovos-microphone-plugin-files` | 0.0.2a8 |
+| `ovos-microphone-plugin-sounddevice` | 0.0.3a8 |
 | `ovos-number-parser` | 0.5.2a2 |
-| `ovos-ocp-files-plugin` | 0.13.1 |
-| `ovos-ocp-m3u-plugin` | 0.0.2a2 |
-| `ovos-ocp-news-plugin` | 0.1.3a1 |
-| `ovos-ocp-pipeline-plugin` | 1.1.19a3 |
-| `ovos-ocp-rss-plugin` | 0.1.3a1 |
-| `ovos-ocp-youtube-plugin` | 0.0.7a1 |
-| `ovos-openai-plugin` | 2.0.7a1 |
+| `ovos-ocp-files-plugin` | 0.13.2a2 |
+| `ovos-ocp-m3u-plugin` | 0.0.4a4 |
+| `ovos-ocp-news-plugin` | 0.1.3a4 |
+| `ovos-ocp-pipeline-plugin` | 1.1.21a5 |
+| `ovos-ocp-rss-plugin` | 0.1.3a4 |
+| `ovos-ocp-youtube-plugin` | 0.0.7a4 |
+| `ovos-openai-plugin` | 2.0.7a8 |
 | `ovos-option-matcher-fuzzy-plugin` | 0.0.1 |
 | `ovos-padatious` | 1.5.0a1 |
-| `ovos-persona` | 0.9.0a2 |
-| `ovos-phal` | 0.2.12 |
-| `ovos-phal-plugin-alsa` | 0.1.6 |
-| `ovos-phal-plugin-connectivity-events` | 0.1.4a2 |
-| `ovos-phal-plugin-hotkeys` | 0.1.1 |
-| `ovos-phal-plugin-ipgeo` | 0.1.8a1 |
-| `ovos-phal-plugin-mk1` | 0.1.3 |
-| `ovos-phal-plugin-mk2-fan-control` | 0.0.1 |
-| `ovos-phal-plugin-network-manager` | 1.3.6a1 |
-| `ovos-phal-plugin-oauth` | 0.1.3 |
-| `ovos-phal-plugin-system` | 1.3.5a1 |
-| `ovos-phal-plugin-wallpaper-manager` | 0.2.7a1 |
-| `ovos-phal-plugin-wifi-setup` | 1.1.1a1 |
-| `ovos-plugin-common-play` | 1.3.1 |
-| `ovos-plugin-manager` | 2.6.1a1 |
+| `ovos-persona` | 0.9.0a7 |
+| `ovos-phal` | 0.2.15a1 |
+| `ovos-phal-plugin-alsa` | 0.1.9a1 |
+| `ovos-phal-plugin-connectivity-events` | 0.1.6a1 |
+| `ovos-phal-plugin-hotkeys` | 0.1.3a1 |
+| `ovos-phal-plugin-ipgeo` | 0.1.9a1 |
+| `ovos-phal-plugin-mk1` | 0.1.5a1 |
+| `ovos-phal-plugin-mk2-fan-control` | 0.0.3a1 |
+| `ovos-phal-plugin-network-manager` | 1.3.7a1 |
+| `ovos-phal-plugin-oauth` | 0.1.7a1 |
+| `ovos-phal-plugin-system` | 1.3.8a1 |
+| `ovos-phal-plugin-wallpaper-manager` | 0.2.8a1 |
+| `ovos-plugin-common-play` | 1.3.3a1 |
+| `ovos-plugin-manager` | 2.7.0a1 |
 | `ovos-plugin-vlc` | 0.0.2 |
-| `ovos-simple-listener` | 0.2.0a1 |
+| `ovos-simple-listener` | 0.3.1a1 |
 | `ovos-skill-alerts` | 0.1.32a1 |
-| `ovos-skill-application-launcher` | 0.5.15a2 |
+| `ovos-skill-application-launcher` | 0.5.17a3 |
 | `ovos-skill-audio-recording` | 0.2.10a3 |
 | `ovos-skill-boot-finished` | 0.5.4a1 |
-| `ovos-skill-camera` | 1.0.9a1 |
+| `ovos-skill-camera` | 1.0.9a2 |
 | `ovos-skill-cmd` | 0.2.14a3 |
 | `ovos-skill-color-picker` | 0.0.10a2 |
-| `ovos-skill-confucius-quotes` | 0.1.14a2 |
+| `ovos-skill-confucius-quotes` | 0.2.2a3 |
 | `ovos-skill-count` | 0.0.3a4 |
 | `ovos-skill-date-time` | 1.1.10a4 |
 | `ovos-skill-days-in-history` | 0.3.12a3 |
-| `ovos-skill-ddg` | 0.3.7a4 |
+| `ovos-skill-ddg` | 0.3.9a1 |
 | `ovos-skill-diagnostics` | 0.0.11a3 |
-| `ovos-skill-dictation` | 0.2.20a4 |
+| `ovos-skill-dictation` | 0.2.23a4 |
 | `ovos-skill-fallback-unknown` | 0.1.10a2 |
 | `ovos-skill-fuster-quotes` | 0.0.6a3 |
 | `ovos-skill-hello-world` | 0.2.5a2 |
-| `ovos-skill-homescreen` | 3.0.3 |
-| `ovos-skill-icanhazdadjokes` | 0.3.8a2 |
+| `ovos-skill-homescreen` | 3.0.4a1 |
+| `ovos-skill-icanhazdadjokes` | 0.3.10a3 |
 | `ovos-skill-ip` | 0.2.11a1 |
-| `ovos-skill-iss-location` | 0.2.17a4 |
+| `ovos-skill-iss-location` | 0.2.18a3 |
 | `ovos-skill-laugh` | 1.0.6a1 |
 | `ovos-skill-local-media` | 0.2.15a1 |
-| `ovos-skill-moviemaster` | 0.0.13a1 |
+| `ovos-skill-moviemaster` | 0.0.14a4 |
 | `ovos-skill-naptime` | 0.3.17a1 |
 | `ovos-skill-news` | 0.4.9a1 |
-| `ovos-skill-number-facts` | 0.1.12 |
-| `ovos-skill-parrot` | 0.1.26a3 |
+| `ovos-skill-number-facts` | 0.1.13a3 |
+| `ovos-skill-parrot` | 0.1.27a6 |
 | `ovos-skill-personal` | 0.1.23a3 |
-| `ovos-skill-pyradios` | 0.1.6a1 |
+| `ovos-skill-pyradios` | 0.1.6a6 |
 | `ovos-skill-randomness` | 1.1.0a1 |
 | `ovos-skill-screenshot` | 0.0.10a2 |
 | `ovos-skill-somafm` | 0.1.6a8 |
 | `ovos-skill-speedtest` | 0.3.8a3 |
 | `ovos-skill-spelling` | 0.2.7a1 |
-| `ovos-skill-volume` | 0.1.17a6 |
+| `ovos-skill-volume` | 0.1.21a3 |
 | `ovos-skill-wallpapers` | 1.0.14a4 |
-| `ovos-skill-weather` | 1.0.10a1 |
-| `ovos-skill-wikihow` | 0.3.3 |
-| `ovos-skill-wikipedia` | 0.8.14a3 |
-| `ovos-skill-wolfie` | 0.5.9a2 |
+| `ovos-skill-weather` | 1.0.11a1 |
+| `ovos-skill-wikihow` | 0.3.6a3 |
+| `ovos-skill-wikipedia` | 0.8.17a1 |
+| `ovos-skill-wolfie` | 0.6.0a1 |
 | `ovos-skill-word-of-the-day` | 0.2.5 |
-| `ovos-skill-wordnet` | 0.2.7a2 |
-| `ovos-skill-youtube-music` | 0.1.8a1 |
-| `ovos-solver-aiml-plugin` | 0.0.2a2 |
+| `ovos-skill-wordnet` | 0.4.0a1 |
+| `ovos-skill-youtube-music` | 0.1.10a1 |
+| `ovos-solver-aiml-plugin` | 0.0.2a5 |
 | `ovos-solver-bm25-plugin` | 0.1.1a2 |
-| `ovos-solver-failure-plugin` | 0.0.4a2 |
+| `ovos-solver-failure-plugin` | 0.0.6a1 |
 | `ovos-solver-gguf-plugin` | 0.1.1a2 |
 | `ovos-solver-rivescript-plugin` | 0.0.2a2 |
-| `ovos-solver-yes-no-plugin` | 0.2.9a3 |
 | `ovos-spec-tools` | 0.8.0a2 |
-| `ovos-stt-plugin-azure` | 0.0.0a2 |
+| `ovos-stt-plugin-azure` | 0.0.0a3 |
 | `ovos-stt-plugin-chromium` | 0.1.2 |
-| `ovos-stt-plugin-citrinet` | 0.1.1a9 |
-| `ovos-stt-plugin-fasterwhisper` | 0.4.1a1 |
+| `ovos-stt-plugin-citrinet` | 0.1.1a10 |
+| `ovos-stt-plugin-fasterwhisper` | 0.4.1a5 |
 | `ovos-stt-plugin-mms` | 0.2.0 |
 | `ovos-stt-plugin-nos` | 0.2.0 |
 | `ovos-stt-plugin-onnx-asr` | 0.0.1 |
 | `ovos-stt-plugin-rover` | 0.1.0a1 |
-| `ovos-stt-plugin-server` | 0.1.4a1 |
+| `ovos-stt-plugin-server` | 0.1.5a3 |
 | `ovos-stt-plugin-sherpa-onnx` | 0.0.1 |
-| `ovos-stt-plugin-vosk` | 0.2.7 |
-| `ovos-stt-plugin-wav2vec` | 0.3.3a2 |
+| `ovos-stt-plugin-vosk` | 0.2.8a1 |
+| `ovos-stt-plugin-wav2vec` | 0.3.3a7 |
 | `ovos-stt-plugin-whisper` | 0.1.5a1 |
-| `ovos-stt-plugin-whisper-lm` | 0.0.6a4 |
-| `ovos-stt-plugin-whispercpp` | 0.0.1 |
+| `ovos-stt-plugin-whisper-lm` | 0.0.6a10 |
+| `ovos-stt-plugin-whispercpp` | 0.0.2a1 |
 | `ovos-transcription-validator-plugin` | 0.1.2a1 |
-| `ovos-translate-plugin-nllb` | 0.0.2a2 |
-| `ovos-translate-server-plugin` | 0.0.6a1 |
-| `ovos-tts-plugin-ahotts` | 0.1.2a2 |
-| `ovos-tts-plugin-beepspeak` | 0.0.1a1 |
-| `ovos-tts-plugin-coqui` | 0.2.0 |
-| `ovos-tts-plugin-cotovia` | 0.4.5a2 |
-| `ovos-tts-plugin-edge-tts` | 0.2.3a1 |
-| `ovos-tts-plugin-espeakng` | 0.0.2 |
-| `ovos-tts-plugin-google-tx` | 1.0.4a5 |
-| `ovos-tts-plugin-marytts` | 0.1.0 |
+| `ovos-translate-plugin-nllb` | 0.0.2a4 |
+| `ovos-translate-server-plugin` | 0.0.8a1 |
+| `ovos-tts-plugin-ahotts` | 0.1.2a6 |
+| `ovos-tts-plugin-beepspeak` | 0.0.2a1 |
+| `ovos-tts-plugin-coqui` | 0.2.2a7 |
+| `ovos-tts-plugin-cotovia` | 0.4.6a2 |
+| `ovos-tts-plugin-edge-tts` | 0.2.3a3 |
+| `ovos-tts-plugin-espeakng` | 0.0.3a3 |
+| `ovos-tts-plugin-google-tx` | 1.0.5a2 |
+| `ovos-tts-plugin-marytts` | 0.1.2a1 |
 | `ovos-tts-plugin-matxa-multispeaker-cat` | 0.0.1a5 |
-| `ovos-tts-plugin-mimic` | 0.2.9a2 |
-| `ovos-tts-plugin-pico` | 0.0.4a2 |
+| `ovos-tts-plugin-mimic` | 0.3.3a3 |
+| `ovos-tts-plugin-pico` | 0.0.4a3 |
 | `ovos-tts-plugin-piper` | 0.2.6a2 |
-| `ovos-tts-plugin-polly` | 0.2.3a2 |
-| `ovos-tts-plugin-server` | 0.0.5 |
-| `ovos-utils` | 0.11.1a1 |
-| `ovos-utterance-corrections-plugin` | 0.1.3a1 |
-| `ovos-utterance-normalizer` | 0.2.4a1 |
-| `ovos-utterance-plugin-cancel` | 0.3.0a1 |
-| `ovos-vad-plugin-noise` | 0.1.3a2 |
+| `ovos-tts-plugin-polly` | 0.2.4a1 |
+| `ovos-tts-plugin-server` | 0.0.6a1 |
+| `ovos-utils` | 0.11.2a1 |
+| `ovos-utterance-corrections-plugin` | 0.1.3a5 |
+| `ovos-utterance-normalizer` | 0.2.5a1 |
+| `ovos-utterance-plugin-cancel` | 0.3.1a1 |
+| `ovos-vad-plugin-noise` | 0.1.3a6 |
 | `ovos-vad-plugin-silero` | 0.1.3a2 |
-| `ovos-vad-plugin-webrtcvad` | 0.0.1 |
+| `ovos-vad-plugin-webrtcvad` | 0.0.3a3 |
+| `ovos-wikipedia-plugin` | 1.0.0a2 |
 | `ovos-wikipedia-solver` | 0.1.4a5 |
+| `ovos-wolfram-alpha-plugin` | 1.0.0a2 |
 | `ovos-wolfram-alpha-solver` | 0.0.5a1 |
-| `ovos-workshop` | 7.0.10a1 |
-| `ovos-ww-plugin-openwakeword` | 0.4.1 |
+| `ovos-wordnet-plugin` | 0.1.0 |
+| `ovos-workshop` | 8.2.1a1 |
+| `ovos-ww-plugin-openwakeword` | 0.4.5a1 |
 | `ovos-ww-plugin-precise-onnx` | 0.1.1a3 |
-| `ovos-ww-plugin-vosk` | 0.1.11a1 |
+| `ovos-ww-plugin-vosk` | 0.1.11a2 |
 | `ovos-yaml-editor` | 0.1.0a3 |
 | `ovos-yes-no-plugin` | 0.3.1a1 |
 | `ovoscope` | 0.19.0a1 |
