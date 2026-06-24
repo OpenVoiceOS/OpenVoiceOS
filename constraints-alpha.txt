@@ -1,6 +1,6 @@
 ovos-adapt-parser>=1.3.1a1
 ovos-agentic-loop>=0.1.1a1
-ovos-audio>=1.2.3a1
+ovos-audio>=1.3.0a1
 ovos-audio-plugin-mpv>=0.2.1
 ovos-audio-plugin-simple>=0.1.4a3
 ovos-audio-transformer-plugin-speechbrain-langdetect>=0.0.2a1
@@ -46,7 +46,7 @@ ovos-ocp-rss-plugin>=0.1.3a4
 ovos-ocp-youtube-plugin>=0.0.7a4
 ovos-openai-plugin>=2.0.7a8
 ovos-option-matcher-fuzzy-plugin>=0.0.1
-ovos-padatious>=1.5.0a1
+ovos-padatious>=1.6.0a1
 ovos-persona>=0.9.0a7
 ovos-phal>=0.2.15a1
 ovos-phal-plugin-alsa>=0.1.9a1
