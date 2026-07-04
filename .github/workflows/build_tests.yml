@@ -1,10 +1,20 @@
-name: Run Build Tests
+name: Alpha Co-Install Check
+
 on:
   workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'lists/**'
+      - 'constraints-alpha.txt'
+      - '.github/workflows/build_tests.yml'
+  schedule:
+    - cron: '0 4 * * *'  # daily at 04:00 UTC
 
 jobs:
   build_tests:
     strategy:
+      fail-fast: false
       max-parallel: 4
       matrix:
         python-version: ["3.10", "3.11", "3.12", "3.13"]
@@ -22,25 +32,29 @@ jobs:
           sudo apt install python3-dev swig libssl-dev libfann-dev portaudio19-dev libpulse-dev python3-fann2
           python -m pip install build wheel uv
 
-      - name: Install alpha packages
+      - name: Install full alpha set (co-install check)
         run: |
           uv pip install --system --pre \
             -r lists/core.list \
-            -r lists/dialog_transf.list  \
-            -r lists/intent_transf.list  \
-            -r lists/media.list  \
-            -r lists/mic.list  \
-            -r lists/ocp.list  \
-            -r lists/phal.list  \
-            -r lists/pipeline.list  \
-            -r lists/skills.list  \
-            -r lists/stt.list  \
-            -r lists/translate.list  \
-            -r lists/tts.list  \
-            -r lists/tts_transf.list  \
-            -r lists/utterance_transf.list  \
-            -r lists/vad.list  \
+            -r lists/dialog_transf.list \
+            -r lists/intent_transf.list \
+            -r lists/media.list \
+            -r lists/mic.list \
+            -r lists/ocp.list \
+            -r lists/phal.list \
+            -r lists/pipeline.list \
+            -r lists/skills.list \
+            -r lists/stt.list \
+            -r lists/translate.list \
+            -r lists/tts.list \
+            -r lists/tts_transf.list \
+            -r lists/utterance_transf.list \
+            -r lists/vad.list \
             -r lists/ww.list \
             -r lists/audio_transf.list \
             -r lists/gui.list \
-            -c https://raw.githubusercontent.com/OpenVoiceOS/ovos-releases/refs/heads/main/constraints-alpha.txt
+            -r lists/keywords.list \
+            -r lists/embeddings.list \
+            -r lists/solvers.list \
+            -r lists/hivemind.list \
+            -c constraints-alpha.txt
