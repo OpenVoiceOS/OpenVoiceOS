@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-08-03 12:27 UTC_
+_Generated: 2026-08-10 10:19 UTC_
 
 | | Count |
 |---|---:|
@@ -50,8 +50,8 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 | Package | Alpha version | Latest stable |
 |---------|:-------------:|:-------------:|
 | `hivemind-json-db-plugin` | 0.0.4a3 | 0.0.2 |
-| `hivemind-ovos-agent-plugin` | 0.3.3a1 | 0.1.0 |
-| `hivemind-sqlite-database` | 0.4.0a7 | 0.2.1 |
+| `hivemind-ovos-agent-plugin` | 0.3.6a1 | 0.1.0 |
+| `hivemind-sqlite-database` | 0.4.2a1 | 0.2.1 |
 | `ovos-agentic-loop` | 0.2.2a1 | 0.1.0 |
 | `ovos-ddg-plugin` | 1.0.1a1 | — |
 | `ovos-google-translate-plugin` | 0.0.4a2 | — |
@@ -83,16 +83,16 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 
 | Package | Version |
 |---------|---------|
-| `hivemind-audio-binary-protocol` | 2.1.7a1 |
-| `hivemind-bus-client` | 0.11.0a1 |
-| `hivemind-core` | 4.10.15a1 |
+| `hivemind-audio-binary-protocol` | 2.1.8a1 |
+| `hivemind-bus-client` | 1.0.4a1 |
+| `hivemind-core` | 4.11.4a2 |
 | `hivemind-http-protocol` | 0.0.5a1 |
 | `hivemind-json-db-plugin` | 0.0.4a3 |
-| `hivemind-ovos-agent-plugin` | 0.3.3a1 |
+| `hivemind-ovos-agent-plugin` | 0.3.6a1 |
 | `hivemind-plugin-manager` | 0.9.0a3 |
-| `hivemind-redis-database` | 0.1.0a7 |
-| `hivemind-sqlite-database` | 0.4.0a7 |
-| `hivemind-websocket-protocol` | 0.2.2a2 |
+| `hivemind-redis-database` | 0.1.1a1 |
+| `hivemind-sqlite-database` | 0.4.2a1 |
+| `hivemind-websocket-protocol` | 0.2.5a1 |
 | `ovos-adapt-parser` | 1.6.1a1 |
 | `ovos-agentic-loop` | 0.2.2a1 |
 | `ovos-audio` | 2.1.1a2 |
@@ -179,7 +179,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-icanhazdadjokes` | 0.3.11a3 |
 | `ovos-skill-ip` | 0.3.0a4 |
 | `ovos-skill-iss-location` | 0.2.18a6 |
-| `ovos-skill-laugh` | 1.0.6a1 |
+| `ovos-skill-laugh` | 1.0.6a2 |
 | `ovos-skill-local-media` | 0.2.15a3 |
 | `ovos-skill-moviemaster` | 0.0.15a2 |
 | `ovos-skill-naptime` | 0.4.0a4 |
@@ -188,7 +188,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-parrot` | 0.1.31a3 |
 | `ovos-skill-personal` | 0.1.25a2 |
 | `ovos-skill-pyradios` | 0.1.6a7 |
-| `ovos-skill-randomness` | 1.1.0a3 |
+| `ovos-skill-randomness` | 1.1.0a4 |
 | `ovos-skill-screenshot` | 0.0.10a4 |
 | `ovos-skill-somafm` | 0.1.6a8 |
 | `ovos-skill-speedtest` | 0.3.8a6 |
