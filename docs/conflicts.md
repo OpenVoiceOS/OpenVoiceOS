@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-08-17 09:45 UTC_
+_Generated: 2026-08-24 09:50 UTC_
 
 | | Count |
 |---|---:|
@@ -61,7 +61,7 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 | `ovos-media-plugin-simple` | 0.1.0a1 | — |
 | `ovos-media-plugin-vlc` | 0.2.0a2 | — |
 | `ovos-option-matcher-fuzzy-plugin` | 0.0.2a1 | 0.0.1 |
-| `ovos-spec-tools` | 1.7.0a3 | — |
+| `ovos-spec-tools` | 1.8.0a1 | — |
 | `ovos-stt-plugin-azure` | 0.0.0a4 | — |
 | `ovos-stt-plugin-rover` | 0.1.0a2 | 0.0.1 |
 | `ovos-transcription-validator-plugin` | 0.1.2a3 | 0.1.0 |
@@ -104,7 +104,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-chromadb-embeddings-plugin` | 0.3.0a4 |
 | `ovos-color-parser` | 0.11.2a1 |
 | `ovos-common-query-pipeline-plugin` | 1.1.15a1 |
-| `ovos-config` | 2.3.9a1 |
+| `ovos-config` | 2.3.10a2 |
 | `ovos-core` | 2.2.4a1 |
 | `ovos-date-parser` | 0.29.0 |
 | `ovos-ddg-plugin` | 1.0.2a1 |
@@ -155,7 +155,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-phal-plugin-system` | 1.3.8a2 |
 | `ovos-phal-plugin-wallpaper-manager` | 0.2.8a2 |
 | `ovos-plugin-common-play` | 1.3.5a1 |
-| `ovos-plugin-manager` | 2.11.1a2 |
+| `ovos-plugin-manager` | 2.11.1a3 |
 | `ovos-plugin-vlc` | 0.0.2 |
 | `ovos-simple-listener` | 0.3.1a2 |
 | `ovos-skill-alerts` | 0.3.6a1 |
@@ -179,7 +179,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-icanhazdadjokes` | 0.3.11a4 |
 | `ovos-skill-ip` | 0.3.0a5 |
 | `ovos-skill-iss-location` | 0.2.18a8 |
-| `ovos-skill-laugh` | 1.1.0a1 |
+| `ovos-skill-laugh` | 1.1.1a1 |
 | `ovos-skill-local-media` | 0.2.15a3 |
 | `ovos-skill-moviemaster` | 0.1.1a1 |
 | `ovos-skill-naptime` | 0.4.0a5 |
@@ -188,7 +188,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-parrot` | 0.1.32a1 |
 | `ovos-skill-personal` | 0.1.26a2 |
 | `ovos-skill-pyradios` | 0.1.6a7 |
-| `ovos-skill-randomness` | 1.1.0a4 |
+| `ovos-skill-randomness` | 1.1.1a1 |
 | `ovos-skill-screenshot` | 0.0.10a5 |
 | `ovos-skill-somafm` | 0.1.6a8 |
 | `ovos-skill-speedtest` | 0.3.8a7 |
@@ -207,7 +207,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-solver-failure-plugin` | 0.0.6a2 |
 | `ovos-solver-gguf-plugin` | 0.1.1a2 |
 | `ovos-solver-rivescript-plugin` | 0.1.1a1 |
-| `ovos-spec-tools` | 1.7.0a3 |
+| `ovos-spec-tools` | 1.8.0a1 |
 | `ovos-stt-plugin-azure` | 0.0.0a4 |
 | `ovos-stt-plugin-chromium` | 0.1.2 |
 | `ovos-stt-plugin-citrinet` | 0.1.1a12 |
@@ -258,7 +258,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-ww-plugin-vosk` | 0.1.11a3 |
 | `ovos-yaml-editor` | 0.1.0a3 |
 | `ovos-yes-no-plugin` | 0.3.1a2 |
-| `ovoscope` | 1.6.11a1 |
+| `ovoscope` | 1.6.12a1 |
 
 </details>
 
@@ -353,7 +353,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-icanhazdadjokes` | 0.3.7 |
 | `ovos-skill-ip` | 0.2.8 |
 | `ovos-skill-iss-location` | 0.2.16 |
-| `ovos-skill-laugh` | 1.0.5 |
+| `ovos-skill-laugh` | 1.1.0 |
 | `ovos-skill-local-media` | 0.2.12 |
 | `ovos-skill-moviemaster` | 0.0.12 |
 | `ovos-skill-naptime` | 0.3.15 |
@@ -362,7 +362,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-skill-parrot` | 0.1.25 |
 | `ovos-skill-personal` | 0.1.19 |
 | `ovos-skill-pyradios` | 0.1.5 |
-| `ovos-skill-randomness` | 1.0.1 |
+| `ovos-skill-randomness` | 1.1.0 |
 | `ovos-skill-screenshot` | 0.0.7 |
 | `ovos-skill-somafm` | 0.1.5 |
 | `ovos-skill-speedtest` | 0.3.6 |
