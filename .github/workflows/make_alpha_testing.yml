@@ -6,6 +6,11 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      # Token with contents:write on the container image repositories, used only to tell
+      # them that the pins moved. Optional: without it the dispatch step is skipped and
+      # the images fall back to their own hourly poll.
+      DISPATCH_TOKEN: ${{ secrets.IMAGE_DISPATCH_TOKEN }}
 
     steps:
       - name: Checkout repository
@@ -38,9 +43,33 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit results
+        id: commit
         run: |
           git add constraints-testing.txt lists/unstable.list lists/deprecated.list docs/conflicts.md
-          git diff --staged --quiet || git commit -m "Sync testing constraints from alpha [skip ci]"
-          git push
+          if git diff --staged --quiet -- constraints-testing.txt; then
+            constraints_changed=false
+          else
+            constraints_changed=true
+          fi
+          git diff --staged --quiet || { git commit -m "Sync testing constraints from alpha [skip ci]"; git push; }
+          echo "changed=${constraints_changed}" >> "$GITHUB_OUTPUT"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tell the container images that the testing pins moved
+        # ovos-docker and hivemind-docker install every package against
+        # constraints-<channel>.txt, so a pin change here is what makes them rebuild.
+        # They also poll hourly, but GitHub delays scheduled runs (in practice by hours),
+        # so this dispatch is what makes the rebuild prompt; the poll stays as a fallback.
+        if: steps.commit.outputs.changed == 'true' && env.DISPATCH_TOKEN != ''
+        env:
+          GH_TOKEN: ${{ env.DISPATCH_TOKEN }}
+        run: |
+          for repo in OpenVoiceOS/ovos-docker JarbasHiveMind/hivemind-docker; do
+            if printf '%s' '{"event_type":"constraints-updated","client_payload":{"channel":"testing"}}' \
+              | gh api --method POST "repos/${repo}/dispatches" --input -; then
+              echo "asked ${repo} to rebuild what testing changed"
+            else
+              echo "::warning::could not notify ${repo}; its hourly poll will pick this up"
+            fi
+          done
