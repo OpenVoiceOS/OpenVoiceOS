@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-08-24 09:50 UTC_
+_Generated: 2026-08-31 16:53 UTC_
 
 | | Count |
 |---|---:|
@@ -53,7 +53,7 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 | `hivemind-ovos-agent-plugin` | 0.3.8a2 | 0.1.0 |
 | `hivemind-sqlite-database` | 0.4.3a5 | 0.2.1 |
 | `ovos-agentic-loop` | 0.2.3a1 | 0.1.0 |
-| `ovos-ddg-plugin` | 1.0.2a1 | — |
+| `ovos-ddg-plugin` | 1.1.0a1 | — |
 | `ovos-google-translate-plugin` | 0.0.4a2 | — |
 | `ovos-lang-detector-classics-plugin` | 0.0.2a1 | — |
 | `ovos-media-plugin-mplayer` | 0.2.0a3 | — |
@@ -70,7 +70,7 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 | `ovos-wikipedia-plugin` | 1.1.1a1 | — |
 | `ovos-wolfram-alpha-plugin` | 1.1.1a1 | — |
 | `ovos-wordnet-plugin` | 0.1.4a1 | 0.1.0 |
-| `ovos-yes-no-plugin` | 0.3.1a2 | 0.3.0 |
+| `ovos-yes-no-plugin` | 0.4.0a1 | 0.3.0 |
 
 ---
 
@@ -85,8 +85,8 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 |---------|---------|
 | `hivemind-audio-binary-protocol` | 2.2.0a4 |
 | `hivemind-bus-client` | 1.0.15a2 |
-| `hivemind-core` | 4.13.13a1 |
-| `hivemind-http-protocol` | 0.0.8a2 |
+| `hivemind-core` | 4.13.14a1 |
+| `hivemind-http-protocol` | 0.0.8a3 |
 | `hivemind-json-db-plugin` | 0.0.4a7 |
 | `hivemind-ovos-agent-plugin` | 0.3.8a2 |
 | `hivemind-plugin-manager` | 0.9.0a7 |
@@ -95,19 +95,19 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `hivemind-websocket-protocol` | 0.2.9a1 |
 | `ovos-adapt-parser` | 1.6.3a1 |
 | `ovos-agentic-loop` | 0.2.3a1 |
-| `ovos-audio` | 2.2.0a2 |
+| `ovos-audio` | 2.2.3a2 |
 | `ovos-audio-plugin-mpv` | 0.2.1 |
 | `ovos-audio-plugin-simple` | 0.1.4a3 |
 | `ovos-audio-transformer-plugin-speechbrain-langdetect` | 0.0.2a1 |
 | `ovos-bidirectional-translation-plugin` | 0.1.3a4 |
-| `ovos-bus-client` | 2.8.4a2 |
+| `ovos-bus-client` | 2.9.0a1 |
 | `ovos-chromadb-embeddings-plugin` | 0.3.0a4 |
-| `ovos-color-parser` | 0.11.2a1 |
-| `ovos-common-query-pipeline-plugin` | 1.1.15a1 |
-| `ovos-config` | 2.3.10a2 |
+| `ovos-color-parser` | 0.11.3a1 |
+| `ovos-common-query-pipeline-plugin` | 1.1.15a2 |
+| `ovos-config` | 2.3.11a2 |
 | `ovos-core` | 2.2.4a1 |
 | `ovos-date-parser` | 0.29.0 |
-| `ovos-ddg-plugin` | 1.0.2a1 |
+| `ovos-ddg-plugin` | 1.1.0a1 |
 | `ovos-ddg-solver-plugin` | 0.0.2a3 |
 | `ovos-dialog-normalizer-plugin` | 0.0.3a2 |
 | `ovos-dinkum-listener` | 0.9.0a1 |
@@ -120,7 +120,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-lang-detector-classics-plugin` | 0.0.2a1 |
 | `ovos-lang-detector-fasttext-plugin` | 0.1.3a4 |
 | `ovos-lang-parser` | 0.7.1a4 |
-| `ovos-m2v-pipeline` | 0.5.7a1 |
+| `ovos-m2v-pipeline` | 0.6.0a1 |
 | `ovos-mark1-utils` | 0.0.1 |
 | `ovos-media-plugin-chromecast` | 0.1.4a12 |
 | `ovos-media-plugin-mplayer` | 0.2.0a3 |
@@ -128,7 +128,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-media-plugin-simple` | 0.1.0a1 |
 | `ovos-media-plugin-spotify` | 0.2.9a1 |
 | `ovos-media-plugin-vlc` | 0.2.0a2 |
-| `ovos-messagebus` | 0.2.1a2 |
+| `ovos-messagebus` | 0.2.1a3 |
 | `ovos-microphone-plugin-alsa` | 0.1.4a6 |
 | `ovos-microphone-plugin-files` | 0.0.2a9 |
 | `ovos-microphone-plugin-sounddevice` | 0.0.3a9 |
@@ -136,13 +136,13 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-ocp-files-plugin` | 0.13.2a3 |
 | `ovos-ocp-m3u-plugin` | 0.0.4a5 |
 | `ovos-ocp-news-plugin` | 0.1.4a1 |
-| `ovos-ocp-pipeline-plugin` | 1.1.28a2 |
+| `ovos-ocp-pipeline-plugin` | 1.1.29a1 |
 | `ovos-ocp-rss-plugin` | 0.1.3a6 |
 | `ovos-ocp-youtube-plugin` | 0.0.9a1 |
 | `ovos-openai-plugin` | 2.0.10a1 |
 | `ovos-option-matcher-fuzzy-plugin` | 0.0.2a1 |
-| `ovos-padatious` | 2.0.7a1 |
-| `ovos-persona` | 0.9.0a17 |
+| `ovos-padatious` | 2.0.9a1 |
+| `ovos-persona` | 0.9.0a18 |
 | `ovos-phal` | 0.3.0a1 |
 | `ovos-phal-plugin-alsa` | 0.1.9a1 |
 | `ovos-phal-plugin-connectivity-events` | 0.1.6a2 |
@@ -155,59 +155,59 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-phal-plugin-system` | 1.3.8a2 |
 | `ovos-phal-plugin-wallpaper-manager` | 0.2.8a2 |
 | `ovos-plugin-common-play` | 1.3.5a1 |
-| `ovos-plugin-manager` | 2.11.1a3 |
+| `ovos-plugin-manager` | 2.11.4a1 |
 | `ovos-plugin-vlc` | 0.0.2 |
 | `ovos-simple-listener` | 0.3.1a2 |
-| `ovos-skill-alerts` | 0.3.6a1 |
-| `ovos-skill-application-launcher` | 0.6.3a1 |
+| `ovos-skill-alerts` | 0.3.6a4 |
+| `ovos-skill-application-launcher` | 0.6.4a1 |
 | `ovos-skill-audio-recording` | 0.2.11a1 |
-| `ovos-skill-boot-finished` | 0.5.5a4 |
+| `ovos-skill-boot-finished` | 0.5.5a8 |
 | `ovos-skill-camera` | 1.1.0a4 |
-| `ovos-skill-cmd` | 0.3.1a1 |
-| `ovos-skill-color-picker` | 0.1.1a1 |
+| `ovos-skill-cmd` | 0.3.2a1 |
+| `ovos-skill-color-picker` | 0.1.1a2 |
 | `ovos-skill-confucius-quotes` | 0.4.0a2 |
-| `ovos-skill-count` | 0.0.7a1 |
-| `ovos-skill-date-time` | 1.1.16a1 |
+| `ovos-skill-count` | 0.0.8a1 |
+| `ovos-skill-date-time` | 1.2.0a1 |
 | `ovos-skill-days-in-history` | 0.3.16a2 |
-| `ovos-skill-ddg` | 0.3.9a5 |
+| `ovos-skill-ddg` | 0.3.10a1 |
 | `ovos-skill-diagnostics` | 0.0.12a4 |
 | `ovos-skill-dictation` | 0.2.24a1 |
-| `ovos-skill-fallback-unknown` | 0.1.13a1 |
+| `ovos-skill-fallback-unknown` | 0.1.13a2 |
 | `ovos-skill-fuster-quotes` | 0.0.7a3 |
-| `ovos-skill-hello-world` | 0.2.7a2 |
+| `ovos-skill-hello-world` | 0.2.8a1 |
 | `ovos-skill-homescreen` | 3.0.4a2 |
 | `ovos-skill-icanhazdadjokes` | 0.3.11a4 |
-| `ovos-skill-ip` | 0.3.0a5 |
+| `ovos-skill-ip` | 0.3.1a1 |
 | `ovos-skill-iss-location` | 0.2.18a8 |
-| `ovos-skill-laugh` | 1.1.1a1 |
-| `ovos-skill-local-media` | 0.2.15a3 |
+| `ovos-skill-laugh` | 1.1.2a1 |
+| `ovos-skill-local-media` | 0.2.16a1 |
 | `ovos-skill-moviemaster` | 0.1.1a1 |
-| `ovos-skill-naptime` | 0.4.0a5 |
-| `ovos-skill-news` | 0.4.9a2 |
-| `ovos-skill-number-facts` | 0.1.13a8 |
-| `ovos-skill-parrot` | 0.1.32a1 |
-| `ovos-skill-personal` | 0.1.26a2 |
+| `ovos-skill-naptime` | 0.4.0a6 |
+| `ovos-skill-news` | 0.4.10a1 |
+| `ovos-skill-number-facts` | 0.1.14a2 |
+| `ovos-skill-parrot` | 0.1.33a1 |
+| `ovos-skill-personal` | 1.0.0a1 |
 | `ovos-skill-pyradios` | 0.1.6a7 |
-| `ovos-skill-randomness` | 1.1.1a1 |
+| `ovos-skill-randomness` | 1.1.1a2 |
 | `ovos-skill-screenshot` | 0.0.10a5 |
 | `ovos-skill-somafm` | 0.1.6a8 |
 | `ovos-skill-speedtest` | 0.3.8a7 |
-| `ovos-skill-spelling` | 0.3.0a2 |
+| `ovos-skill-spelling` | 0.4.1a1 |
 | `ovos-skill-volume` | 0.1.23a1 |
 | `ovos-skill-wallpapers` | 1.0.16a1 |
-| `ovos-skill-weather` | 1.0.13a2 |
+| `ovos-skill-weather` | 1.0.13a3 |
 | `ovos-skill-wikihow` | 0.3.9a1 |
-| `ovos-skill-wikipedia` | 0.8.17a5 |
+| `ovos-skill-wikipedia` | 0.8.18a1 |
 | `ovos-skill-wolfie` | 0.7.2a2 |
-| `ovos-skill-word-of-the-day` | 0.2.6a2 |
-| `ovos-skill-wordnet` | 0.6.3a1 |
+| `ovos-skill-word-of-the-day` | 0.2.7a1 |
+| `ovos-skill-wordnet` | 0.6.3a4 |
 | `ovos-skill-youtube-music` | 0.1.10a2 |
-| `ovos-solver-aiml-plugin` | 0.0.2a8 |
+| `ovos-solver-aiml-plugin` | 0.0.2a10 |
 | `ovos-solver-bm25-plugin` | 0.1.1a3 |
 | `ovos-solver-failure-plugin` | 0.0.6a2 |
 | `ovos-solver-gguf-plugin` | 0.1.1a2 |
 | `ovos-solver-rivescript-plugin` | 0.1.1a1 |
-| `ovos-spec-tools` | 1.8.0a1 |
+| `ovos-spec-tools` | 1.8.0a2 |
 | `ovos-stt-plugin-azure` | 0.0.0a4 |
 | `ovos-stt-plugin-chromium` | 0.1.2 |
 | `ovos-stt-plugin-citrinet` | 0.1.1a12 |
@@ -240,7 +240,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-tts-plugin-piper` | 0.2.6a2 |
 | `ovos-tts-plugin-polly` | 0.3.0a2 |
 | `ovos-tts-plugin-server` | 0.0.6a3 |
-| `ovos-utils` | 0.13.13a1 |
+| `ovos-utils` | 0.13.14a2 |
 | `ovos-utterance-corrections-plugin` | 0.1.3a6 |
 | `ovos-utterance-normalizer` | 0.2.5a2 |
 | `ovos-utterance-plugin-cancel` | 0.3.3a2 |
@@ -257,8 +257,8 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-ww-plugin-precise-onnx` | 0.1.1a8 |
 | `ovos-ww-plugin-vosk` | 0.1.11a3 |
 | `ovos-yaml-editor` | 0.1.0a3 |
-| `ovos-yes-no-plugin` | 0.3.1a2 |
-| `ovoscope` | 1.6.12a1 |
+| `ovos-yes-no-plugin` | 0.4.0a1 |
+| `ovoscope` | 1.6.13a1 |
 
 </details>
 
@@ -302,7 +302,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-mark1-utils` | 0.0.1 |
 | `ovos-media-plugin-chromecast` | 0.1.3 |
 | `ovos-media-plugin-spotify` | 0.2.7 |
-| `ovos-messagebus` | 0.2.1a2 |
+| `ovos-messagebus` | 0.2.1a3 |
 | `ovos-microphone-plugin-alsa` | 0.1.3 |
 | `ovos-microphone-plugin-files` | 0.0.1 |
 | `ovos-microphone-plugin-sounddevice` | 0.0.2 |
