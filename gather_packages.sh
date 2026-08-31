@@ -1,5 +1,6 @@
 uv pip compile --pre \
   lists/core.list \
+  lists/utils.list \
   lists/dialog_transf.list  \
   lists/intent_transf.list  \
   lists/media.list  \
@@ -21,5 +22,6 @@ uv pip compile --pre \
   lists/embeddings.list \
   lists/solvers.list \
   lists/hivemind.list \
+  lists/servers.list \
   -c https://raw.githubusercontent.com/OpenVoiceOS/ovos-releases/refs/heads/main/constraints-alpha.txt \
   -o resolved-constraints.txt

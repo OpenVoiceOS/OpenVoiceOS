@@ -6,13 +6,12 @@ ovos-stt-plugin-fasterwhisper
 ovos-stt-plugin-vosk
 #ovos-stt-plugin-nemo
 ovos-stt-plugin-chromium
-ovos-stt-plugin-nos
 ovos-stt-plugin-citrinet
 ovos-stt-plugin-wav2vec
-ovos-stt-plugin-mms
 #ovos-stt-plugin-HiTZ
 ovos-stt-plugin-whisper-lm; python_version<='3.12'
 ovos-stt-plugin-azure
 ovos-stt-plugin-whispercpp
 ovos-stt-plugin-rover
 #ovos-stt-plugin-coreml
+ovos-stt-plugin-nemo

@@ -6,3 +6,16 @@ hivemind-audio-binary-protocol
 hivemind-redis-database
 hivemind-sqlite-database
 json-database
+hivemind-a2a-agent-plugin
+hivemind-cli
+hivemind-ggwave
+hivemind-json-db-plugin
+hivemind-matrix-bridge
+hivemind-mic-satellite
+hivemind-mqtt-protocol
+hivemind-ovos-agent-plugin
+hivemind-persona-agent-plugin
+hivemind-plugin-manager
+hivemind-presence
+hivemind-voice-relay
+hivemind-voice-sat
