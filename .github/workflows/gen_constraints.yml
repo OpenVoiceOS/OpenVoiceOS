@@ -6,6 +6,13 @@ on:
 jobs:
   generate-constraints:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # the generated constraints are committed back to the branch
+    env:
+      # Whether the notification below can run. Only the answer lives at job scope: a
+      # secret cannot be read from an `if:` condition, and the token itself must not be
+      # exposed to the dependency installs and release scripts that run in this job.
+      HAS_DISPATCH_TOKEN: ${{ secrets.IMAGE_DISPATCH_TOKEN != '' }}
 
     steps:
       - name: Checkout repository
@@ -36,9 +43,33 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit generated constraints files
+        id: commit
         run: |
           git add constraints-stable.txt
-          git diff --staged --quiet || git commit -m "Update constraints files [skip ci]"
-          git push
+          if git diff --staged --quiet -- constraints-stable.txt; then
+            constraints_changed=false
+          else
+            constraints_changed=true
+          fi
+          git diff --staged --quiet || { git commit -m "Update constraints files [skip ci]"; git push; }
+          echo "changed=${constraints_changed}" >> "$GITHUB_OUTPUT"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tell the container images that the stable pins moved
+        # ovos-docker and hivemind-docker install every package against
+        # constraints-<channel>.txt, so a pin change here is what makes them rebuild.
+        # They also poll hourly, but GitHub delays scheduled runs (in practice by hours),
+        # so this dispatch is what makes the rebuild prompt; the poll stays as a fallback.
+        if: steps.commit.outputs.changed == 'true' && env.HAS_DISPATCH_TOKEN == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.IMAGE_DISPATCH_TOKEN }}
+        run: |
+          for repo in OpenVoiceOS/ovos-docker JarbasHiveMind/hivemind-docker; do
+            if printf '%s' '{"event_type":"constraints-updated","client_payload":{"channel":"stable"}}' \
+              | gh api --method POST "repos/${repo}/dispatches" --input -; then
+              echo "asked ${repo} to rebuild what stable changed"
+            else
+              echo "::warning::could not notify ${repo}; its hourly poll will pick this up"
+            fi
+          done
