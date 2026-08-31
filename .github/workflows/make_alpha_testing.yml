@@ -6,11 +6,13 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # the generated constraints are committed back to the branch
     env:
-      # Token with contents:write on the container image repositories, used only to tell
-      # them that the pins moved. Optional: without it the dispatch step is skipped and
-      # the images fall back to their own hourly poll.
-      DISPATCH_TOKEN: ${{ secrets.IMAGE_DISPATCH_TOKEN }}
+      # Whether the notification below can run. Only the answer lives at job scope: a
+      # secret cannot be read from an `if:` condition, and the token itself must not be
+      # exposed to the dependency installs and release scripts that run in this job.
+      HAS_DISPATCH_TOKEN: ${{ secrets.IMAGE_DISPATCH_TOKEN != '' }}
 
     steps:
       - name: Checkout repository
@@ -61,9 +63,9 @@ jobs:
         # constraints-<channel>.txt, so a pin change here is what makes them rebuild.
         # They also poll hourly, but GitHub delays scheduled runs (in practice by hours),
         # so this dispatch is what makes the rebuild prompt; the poll stays as a fallback.
-        if: steps.commit.outputs.changed == 'true' && env.DISPATCH_TOKEN != ''
+        if: steps.commit.outputs.changed == 'true' && env.HAS_DISPATCH_TOKEN == 'true'
         env:
-          GH_TOKEN: ${{ env.DISPATCH_TOKEN }}
+          GH_TOKEN: ${{ secrets.IMAGE_DISPATCH_TOKEN }}
         run: |
           for repo in OpenVoiceOS/ovos-docker JarbasHiveMind/hivemind-docker; do
             if printf '%s' '{"event_type":"constraints-updated","client_payload":{"channel":"testing"}}' \
