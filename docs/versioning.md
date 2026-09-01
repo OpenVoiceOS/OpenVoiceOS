@@ -1,8 +1,6 @@
 # Versioning and Commit Conventions
 
-All OVOS repositories follow **Semantic Versioning** and **Conventional Commits**. This isn't just style — these two standards are the foundation of the automated release pipeline that keeps dozens of packages in sync without manual bookkeeping.
-
----
+All OVOS repositories follow **Semantic Versioning** and **Conventional Commits**. These two standards are the foundation of the automated release pipeline that keeps dozens of packages in sync without manual bookkeeping.
 
 ## Semantic Versioning (SemVer)
 
@@ -14,21 +12,19 @@ Every OVOS package version is `MAJOR.MINOR.PATCH`:
 | `MINOR` | New features, backwards-compatible | Safe to upgrade, new things available |
 | `PATCH` | Bug fixes only | Safe to upgrade, nothing new |
 
-Pre-release versions use the `aN` suffix (e.g. `1.2.0a1`). These land in the **alpha** channel and are gated from testing/stable until a final release is cut.
+Pre-release versions use the `aN` suffix (for example `1.2.0a1`). These land in the **alpha** channel and are gated from testing and stable until a final release is cut.
 
 ### Why this matters for the release channels
 
-The version ranges in the constraints files are derived directly from SemVer:
+The version ranges in the constraints files come directly from SemVer:
 
 | Channel | Version range | Reasoning |
 |---|---|---|
-| Stable | `>=X.Y.Z,<X.(Y+1).0` | Only patch upgrades — no new features, no risk |
+| Stable | `>=X.Y.Z,<X.(Y+1).0` | Only patch upgrades, no new features, no risk |
 | Testing | `>=X.Y.Z,<(X+1).0.0` | New features allowed, no breaking changes |
-| Alpha | `>=X.Y.Z` | No upper cap — take everything including pre-releases |
+| Alpha | `>=X.Y.Z` | No upper cap, take everything including pre-releases |
 
-This means a correctly versioned release automatically lands in the right channel. A `PATCH` bump is safe for stable; a `MINOR` bump flows to testing; a `MAJOR` bump requires explicit action and human review before propagating downstream.
-
----
+A correctly versioned release lands in the right channel automatically. A `PATCH` bump is safe for stable. A `MINOR` bump flows to testing. A `MAJOR` bump requires explicit action and human review before it propagates downstream.
 
 ## Conventional Commits
 
@@ -51,36 +47,34 @@ All commits across OVOS repositories use the [Conventional Commits](https://www.
 | `feat!` or `BREAKING CHANGE:` footer | A breaking change | `MAJOR` bump |
 | `chore` | Maintenance, dependency updates | No version bump |
 | `docs` | Documentation only | No version bump |
-| `refactor` | Code restructuring, no behaviour change | No version bump |
+| `refactor` | Code restructuring, no behavior change | No version bump |
 | `test` | Adding or fixing tests | No version bump |
 | `ci` | CI/CD configuration | No version bump |
 | `perf` | Performance improvement | No version bump |
 
-The `!` after the type (e.g. `feat!:`, `fix!:`) is the conventional way to signal a breaking change when the change would otherwise look minor.
+The `!` after the type (for example `feat!:`, `fix!:`) signals a breaking change when the change would otherwise look minor.
 
 ### Examples
 
 ```
 feat(tts): add support for VITS engine
 ```
-→ MINOR bump, flows to testing channel.
+This is a MINOR bump. It flows to the testing channel.
 
 ```
 fix(listener): handle empty VAD frames without crashing
 ```
-→ PATCH bump, flows to stable channel.
+This is a PATCH bump. It flows to the stable channel.
 
 ```
 feat!: remove deprecated mycroft-core compatibility shim
 ```
-→ MAJOR bump, held at alpha until manually promoted.
+This is a MAJOR bump. It is held at alpha until manually promoted.
 
 ```
 chore(deps): update ovos-bus-client to 0.1.2
 ```
-→ No version bump, no release triggered.
-
----
+This triggers no version bump and no release.
 
 ## How it all connects
 
@@ -110,17 +104,18 @@ CI reads commit type
                     formal codename release ──► constraints-stable.txt
 ```
 
-No human has to decide which version number to assign or which channel a release belongs to — the commit message carries that information from the moment the code is written.
-
----
+No human has to decide which version number to assign or which channel a release belongs to. The commit message carries that information from the moment the code is written.
 
 ## Applying this in your own plugin or skill
 
-If you're writing an OVOS plugin or skill and want it to participate in the constraints pipeline:
+If you write an OVOS plugin or skill and want it to participate in the constraints pipeline:
 
 1. Use Conventional Commits in your repository.
-2. Set up automated releases (e.g. with [release-please](https://github.com/googleapis/release-please) or a similar tool) so that merging to `main` publishes to PyPI automatically.
+2. Set up automated releases (for example with [release-please](https://github.com/googleapis/release-please) or a similar tool) so that merging to `main` publishes to PyPI automatically.
 3. Open a PR to add your package to the appropriate `lists/*.list` file in this repository.
 4. Once added, the automation handles promotion between channels.
 
-The OVOS core team is happy to help — see the community links in the [main README](../README.md).
+The OVOS core team is happy to help. See the community links in the [main README](../README.md).
+
+---
+[← Release channels](release-channels.md) · [Home](README.md) · [Distro packaging →](distro-packaging.md)

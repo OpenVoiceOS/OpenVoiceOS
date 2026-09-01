@@ -1,16 +1,14 @@
 # Guide for Distro Packagers
 
-First of all — **thank you**. Every distro that ships OVOS helps grow the ecosystem and puts open, private voice AI into the hands of more people. We genuinely appreciate the effort it takes to package and maintain software for a distribution, and we want to make your life as easy as possible.
+Thank you. Every distro that ships OVOS helps grow the ecosystem and puts open, private voice AI into the hands of more people. Packaging and maintaining software for a distribution takes real effort, and we want to make it as easy as possible.
 
-This document collects practical advice and best practices for packaging OVOS for Linux distributions (Debian/Ubuntu, Fedora/RHEL, Arch, NixOS, Alpine, etc.) or for embedding it in a custom OS image.
-
----
+This document collects practical advice for packaging OVOS for Linux distributions (Debian/Ubuntu, Fedora/RHEL, Arch, NixOS, Alpine, and others) or for embedding it in a custom OS image.
 
 ## Which channel to use
 
-> **Note:** OVOS codename releases have not landed yet. The formal stable/testing/alpha split described in [release-channels.md](release-channels.md) is the target model, but the current state of each channel reflects where we are in that transition.
+> **Note:** OVOS codename releases have not landed yet. The formal stable/testing/alpha split described in [release-channels.md](release-channels.md) is the target model. The current state of each channel reflects where the project is in that transition.
 
-**Right now, `constraints-stable.txt` reflects an older, unmaintained snapshot** — it is not "stable" in the sense of being the most polished or actively supported version. It will become meaningful once the first codename release is cut.
+**Right now, `constraints-stable.txt` reflects an older, unmaintained snapshot.** It is not "stable" in the sense of being the most polished or actively supported version. It becomes meaningful once the first codename release is cut.
 
 Until then, use the channel that matches your distro's update model:
 
@@ -20,23 +18,23 @@ Until then, use the channel that matches your distro's update model:
 | Fixed / point release | **Testing** | `constraints-testing.txt` |
 | *(future)* Pinned to a codename | Stable | `constraints-stable.txt` |
 
-**Testing is the recommended channel for most distros today.** It tracks packages that have a stable PyPI release, passes conflict detection across Python 3.10–3.14, and receives regular updates as new features land. It is the closest thing to "production-ready" OVOS until codename releases begin.
+**Testing is the recommended channel for most distros today.** It tracks packages that have a stable PyPI release. It passes conflict detection across Python 3.10 to 3.14. It gets regular updates as new features land. It is the closest thing to "production-ready" OVOS until codename releases begin.
 
 ```
 https://raw.githubusercontent.com/OpenVoiceOS/ovos-releases/main/constraints-testing.txt
 ```
 
-Rolling-release distros (Arch, NixOS unstable, etc.) are a natural fit for the alpha channel, which tracks the latest published versions with no upper bound.
+Rolling-release distros (Arch, NixOS unstable, and similar) are a natural fit for the alpha channel, which tracks the latest published versions with no upper bound.
 
 ## Pin to a named release, not `main`
 
-Once codename releases begin, use the versioned constraints file URL rather than the `main` branch. This prevents your package from silently picking up constraint changes after your QA cycle is done.
+Once codename releases begin, use the versioned constraints file URL rather than the `main` branch. This stops your package from silently picking up constraint changes after your QA cycle is done.
 
-> Named releases and their tags will be announced in [ovos-releases](https://github.com/OpenVoiceOS/ovos-releases/issues/5). Watch that issue to be notified when the first one lands.
+> Named releases and their tags are announced in [ovos-releases](https://github.com/OpenVoiceOS/ovos-releases/issues/5). Watch that issue to be notified when the first one lands.
 
 ## Install only what your target needs
 
-OVOS is modular. Resist the temptation to install everything. A minimal install is easier to audit, has a smaller attack surface, and is faster to start.
+OVOS is modular. Resist the temptation to install everything. A minimal install is easier to audit, has a smaller attack surface, and starts faster.
 
 A good baseline for a headless voice assistant:
 ```
@@ -44,22 +42,22 @@ ovos-core[mycroft,plugins,skills-essential]
 ```
 
 Add extras deliberately:
-- `skills-gui` only if you ship a display and a GUI client (e.g. ovos-shell)
+- `skills-gui` only if you ship a display and a GUI client (for example ovos-shell)
 - `skills-internet` only if your target has reliable internet access
-- `skills-media` only if you're shipping OCP / media playback
+- `skills-media` only if you ship OCP / media playback
 - `lgpl` only if you explicitly want Padatious intent parsing
 
 See [installation.md](installation.md) for the full extras reference.
 
 ## Use a virtualenv or isolated prefix
 
-OVOS has a large dependency tree. Installing it into the system Python (`/usr/lib/python3/`) risks conflicts with other system packages. We strongly recommend one of:
+OVOS has a large dependency tree. Installing it into the system Python (`/usr/lib/python3/`) risks conflicts with other system packages. We recommend one of:
 
 - A dedicated virtualenv under `/opt/ovos/` or `/usr/lib/ovos/`
 - A `--prefix` install into an isolated path
-- A container / systemd-nspawn image
+- A container or systemd-nspawn image
 
-This also makes upgrades clean — replace the venv rather than trying to upgrade in-place.
+This also keeps upgrades clean: replace the venv rather than upgrade in place.
 
 ## Ship systemd service units
 
@@ -85,7 +83,7 @@ OVOS follows XDG conventions when running as a regular user:
 | Data / models | `~/.local/share/mycroft/` |
 | Log files | `~/.local/state/mycroft/` (or journald via systemd) |
 
-For a system-wide installation running as a dedicated service user (e.g. `ovos`), set `$XDG_CONFIG_HOME`, `$XDG_DATA_HOME`, and `$XDG_STATE_HOME` in the unit's `[Service]` section to point to appropriate system paths like `/etc/ovos/`, `/var/lib/ovos/`, and `/var/log/ovos/`.
+For a system-wide installation running as a dedicated service user (for example `ovos`), set `$XDG_CONFIG_HOME`, `$XDG_DATA_HOME`, and `$XDG_STATE_HOME` in the unit's `[Service]` section to point to appropriate system paths like `/etc/ovos/`, `/var/lib/ovos/`, and `/var/log/ovos/`.
 
 ## Avoid bundling conflicting packages
 
@@ -94,7 +92,7 @@ A few common system packages conflict with OVOS dependencies if both are install
 - `python3-mycroft-*` — legacy Mycroft packages use the same namespace as some OVOS packages
 - Very old versions of `pydantic`, `aiohttp`, or `click` installed system-wide
 
-If you must install into the system Python, check [`docs/conflicts.md`](conflicts.md) in this repo for known problem packages, and test with `pip check` after install.
+If you must install into the system Python, check [conflicts.md](conflicts.md) in this repo for known problem packages, and test with `pip check` after install.
 
 ## Test before shipping
 
@@ -115,13 +113,13 @@ ovos-core &
 
 ## Keeping up with releases
 
-- **Watch this repository** for constraint file updates — `constraints-testing.txt` is updated regularly via automated CI.
-- Subscribe to [ovos-releases#5](https://github.com/OpenVoiceOS/ovos-releases/issues/5) to be notified when the first codename release lands. That will be the signal to start pinning to versioned constraints files.
-- [`docs/conflicts.md`](conflicts.md) is updated weekly and is a useful signal for packages you should hold back or avoid.
+- **Watch this repository** for constraint file updates. `constraints-testing.txt` is updated regularly through automated CI.
+- Subscribe to [ovos-releases#5](https://github.com/OpenVoiceOS/ovos-releases/issues/5) to be notified when the first codename release lands. That is the signal to start pinning to versioned constraints files.
+- [conflicts.md](conflicts.md) is updated weekly and is a useful signal for packages you should hold back or avoid.
 
 ## Tell us you're shipping OVOS
 
-We'd love to know about your distro. Open an issue or start a discussion in [ovos-core](https://github.com/OpenVoiceOS/ovos-core/discussions) and let us know. We can:
+We would like to know about your distro. Open an issue or start a discussion in [ovos-core](https://github.com/OpenVoiceOS/ovos-core/discussions) and let us know. We can:
 
 - Link to your distro from our documentation
 - Notify you early about breaking changes
@@ -129,8 +127,11 @@ We'd love to know about your distro. Open an issue or start a discussion in [ovo
 
 ## Getting help
 
-- **Matrix / Element**: [#OpenVoiceOS:matrix.org](https://matrix.to/#/#OpenVoiceOS:matrix.org) — the most active community channel
+- **Matrix / Element**: [#OpenVoiceOS:matrix.org](https://matrix.to/#/#OpenVoiceOS:matrix.org), the most active community channel
 - **GitHub Discussions**: [ovos-core discussions](https://github.com/OpenVoiceOS/ovos-core/discussions)
-- **Issues**: Open issues in the specific component repo you're having trouble with
+- **Issues**: Open issues in the specific component repo you have trouble with
 
-We're a friendly community and happy to help distro packagers get things right. Thank you again for your work.
+We are a friendly community and happy to help distro packagers get things right. Thank you again for your work.
+
+---
+[← Versioning](versioning.md) · [Home](README.md) · [Maintainers →](maintainers.md)

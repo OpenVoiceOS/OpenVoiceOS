@@ -1,6 +1,6 @@
 # Installing OVOS with pip
 
-This guide covers manual pip installation. If you just want to get started quickly, use a [distro](../README.md#get-started-in-minutes) instead.
+This guide covers manual pip installation. If you want to get started quickly, use a [distro](../README.md#get-started-in-minutes) instead.
 
 ## Prerequisites
 
@@ -13,11 +13,11 @@ This guide covers manual pip installation. If you just want to get started quick
 pip install ovos-core[mycroft,plugins,skills-essential] -c constraints-stable.txt
 ```
 
-This gives you a working voice assistant with all core services, common plugins, and the essential built-in skills.
+This installs a working voice assistant with all core services, common plugins, and the essential built-in skills.
 
 ## Choosing a release channel
 
-Always pass a constraints file to ensure compatible versions are selected. See [release-channels.md](release-channels.md) for details.
+Always pass a constraints file to select compatible versions. See [release-channels.md](release-channels.md) for details.
 
 | Channel | Constraints flag |
 |---|---|
@@ -31,16 +31,16 @@ You can use raw URLs instead of local files:
 pip install ovos-core[mycroft] -c https://raw.githubusercontent.com/OpenVoiceOS/ovos-releases/main/constraints-stable.txt
 ```
 
-## OVOS Extras
+## OVOS extras
 
 OVOS uses pip "extras" to let you install only what you need. Pass them in square brackets after the package name.
 
 | Extra | What it installs |
 |---|---|
 | `mycroft` | All core services as separate processes (listener, audio, GUI, PHAL, messagebus) |
-| `lgpl` | Optional LGPL-licensed dependencies, e.g. [Padatious](https://github.com/MycroftAI/padatious) intent parser |
-| `plugins` | A broad set of community plugins for STT, TTS, wake word, etc. |
-| `skills-essential` | Core built-in skills (date/time, volume, settings, etc.) |
+| `lgpl` | Optional LGPL-licensed dependencies, for example the [Padatious](https://github.com/MycroftAI/padatious) intent parser |
+| `plugins` | A broad set of community plugins for STT, TTS, wake word, and more |
+| `skills-essential` | Core built-in skills (date/time, volume, settings, and more) |
 | `skills-audio` | Skills that produce or require audio |
 | `skills-gui` | Skills that use the OVOS GUI framework |
 | `skills-internet` | Skills that require an internet connection |
@@ -71,7 +71,7 @@ pip install ovos-core[mycroft,lgpl,plugins,skills-essential,skills-audio,skills-
 
 ## Installing individual services
 
-You don't have to use the `mycroft` extra. You can install each OVOS service separately and run them independently. This is useful if you're building a custom setup, a HiveMind satellite, or want to keep the footprint small.
+You do not have to use the `mycroft` extra. You can install each OVOS service separately and run them independently. This is useful when you build a custom setup, a HiveMind satellite, or want to keep the footprint small.
 
 ```bash
 pip install ovos-messagebus        # message bus (required by all services)
@@ -106,3 +106,6 @@ ovos-core &
 ovos-dinkum-listener &
 ovos-audio &
 ```
+
+---
+[Home](README.md) · [Release channels →](release-channels.md)
