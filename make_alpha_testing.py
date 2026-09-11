@@ -40,6 +40,7 @@ PYTHON_VERSIONS = ["3.10", "3.11", "3.12", "3.13", "3.14", "3.15"]
 MAX_CONFLICT_ITERATIONS = 30
 
 _pypi_cache: dict[str, str | None] = {}
+_requires_cache: dict[tuple[str, str], list[str]] = {}
 
 
 def normalize_name(name: str) -> str:
@@ -112,6 +113,44 @@ def get_latest_stable(package_name: str) -> str | None:
     return result
 
 
+def get_requires_dist(package_name: str, version: str) -> list[str]:
+    """Unconditional Requires-Dist entries for an exact package==version release."""
+    norm = normalize_name(package_name)
+    key = (norm, version)
+    if key in _requires_cache:
+        return _requires_cache[key]
+    url = f"https://pypi.org/pypi/{norm}/{version}/json"
+    try:
+        with urllib.request.urlopen(url, timeout=10) as r:
+            data = json.loads(r.read())
+        reqs = data.get("info", {}).get("requires_dist") or []
+    except Exception:
+        reqs = []
+    _requires_cache[key] = reqs
+    return reqs
+
+
+def dependency_upper_bound(reqs: list[str], target_norm: str) -> tuple | None:
+    """Strictest '<X.Y.Z' bound any unconditional requirement in reqs places on
+    target_norm, or None if there is no such bound."""
+    bound = None
+    for req in reqs:
+        req = req.split(";", 1)[0].strip()  # drop environment markers/extras
+        m = re.match(r"([A-Za-z0-9_.\-]+)\s*\(?([^)]*)\)?", req)
+        if not m:
+            continue
+        name, spec = m.groups()
+        if normalize_name(name) != target_norm:
+            continue
+        for part in spec.split(","):
+            um = re.match(r"<\s*([0-9][\w.]*)", part.strip())
+            if um:
+                candidate = version_tuple(um.group(1))
+                if bound is None or candidate < bound:
+                    bound = candidate
+    return bound
+
+
 def load_packages(path: Path) -> dict:
     packages = {}
     for line in path.read_text().splitlines():
@@ -176,16 +215,15 @@ def active_candidates(lines: list[str], py_ver: str) -> set[str]:
     }
 
 
-def run_dry_install(lines: list[str], venv_path: str) -> subprocess.CompletedProcess:
+def run_dry_install(lines: list[str], venv_path: str | None) -> subprocess.CompletedProcess:
     with tempfile.NamedTemporaryFile(mode="w", suffix=".txt", delete=False) as f:
         f.write("\n".join(lines) + "\n")
         tmp_path = f.name
+    cmd = ["uv", "pip", "install", "--dry-run", "-r", tmp_path]
+    if venv_path is not None:
+        cmd[3:3] = ["--python", venv_path]
     try:
-        return subprocess.run(
-            ["uv", "pip", "install", "--python", venv_path, "--dry-run", "-r", tmp_path],
-            capture_output=True,
-            text=True,
-        )
+        return subprocess.run(cmd, capture_output=True, text=True)
     finally:
         Path(tmp_path).unlink(missing_ok=True)
 
@@ -271,6 +309,48 @@ def resolve_conflicts(output_lines: list[str]) -> tuple[list[str], set[str]]:
     return lines, unstable
 
 
+def validate_bumps(lines: list[str], bumped: dict[str, str]) -> list[str]:
+    """Roll back any PyPI-stable floor bump that a package already pinned
+    elsewhere in this same testing set declares an upper bound against.
+
+    A raised floor is only useful if the rest of testing can still depend on
+    it (e.g. bumping ovos-workshop past what the pinned ovos-core's own
+    Requires-Dist allows produces a testing channel that conflicts with
+    itself). This checks each *other* package's real PyPI metadata for its
+    pinned floor release, rather than asking a resolver to solve the whole
+    163-package graph, because several testing members (ovos-agentic-loop,
+    at the time of writing) only publish releases that themselves depend on
+    pre-release-only versions of something else -- a full-graph solve would
+    reject those unrelated to any bump and make every bump look unsafe.
+    """
+    if not bumped:
+        return lines
+
+    pinned_floor: dict[str, str] = {}
+    for line in lines:
+        m = re.search(r">=\s*([^\s,;]+)", line)
+        if m and not is_prerelease(m.group(1)):
+            pinned_floor[line_pkg_name(line)] = m.group(1)
+
+    result = list(lines)
+    for target_norm, original_line in bumped.items():
+        bumped_line = next(line for line in result if line_pkg_name(line) == target_norm)
+        floor_match = re.search(r">=\s*([^\s,;]+)", bumped_line)
+        new_floor = version_tuple(floor_match.group(1))
+        capped_by = None
+        for consumer_norm, consumer_floor in pinned_floor.items():
+            if consumer_norm == target_norm:
+                continue
+            bound = dependency_upper_bound(get_requires_dist(consumer_norm, consumer_floor), target_norm)
+            if bound is not None and new_floor >= bound:
+                capped_by = consumer_norm
+                break
+        if capped_by:
+            print(f"Reverting PyPI stable bump for {target_norm}: {capped_by} caps it below the bumped floor")
+            result = [original_line if line_pkg_name(line) == target_norm else line for line in result]
+    return result
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -305,6 +385,7 @@ def main():
     # --- build candidate testing entries ---
     output_lines = []
     seen = set()
+    bumped: dict[str, str] = {}  # norm -> original (pre-bump) requirement line
 
     for norm, (raw, spec) in testing.items():
         if norm not in alpha:
@@ -320,9 +401,26 @@ def main():
             print(f"PyPI stable found for {normalize_name(raw)}: >={min_ver}")
         elif is_prerelease(min_ver):
             min_ver = lower_prerelease_min(min_ver)
+        else:
+            # Already pinned to a stable release; a newer stable one may have
+            # published on PyPI since testing was last synced. Raise the
+            # floor as a candidate; validate_bumps() below reverts it if the
+            # rest of testing cannot actually resolve with it.
+            latest = get_latest_stable(raw)
+            if latest is not None and version_tuple(latest) > version_tuple(min_ver):
+                print(f"PyPI stable bump candidate for {normalize_name(raw)}: {min_ver} -> {latest}")
+                upper = next_major_upper_bound(alpha_min)
+                bumped[normalize_name(raw)] = f"{normalize_name(raw)}>={min_ver},{upper}"
+                min_ver = latest
         seen.add(norm)
         upper = next_major_upper_bound(alpha_min)
         output_lines.append(f"{normalize_name(raw)}>={min_ver},{upper}")
+
+    # --- revert any PyPI-stable floor bump the rest of already-testing-pinned
+    # packages can't satisfy, before packages new to this run get a chance to
+    # introduce unrelated conflicts (e.g. a missing wheel for some other
+    # platform) that would otherwise mask or get blamed for a real one ---
+    output_lines = validate_bumps(output_lines, bumped)
 
     for norm, (raw, spec) in alpha.items():
         if norm in seen:
@@ -352,6 +450,22 @@ def main():
 
     TESTING_FILE.write_text("\n".join(output_lines) + "\n")
     print(f"Written {len(output_lines)} entries to {TESTING_FILE}")
+
+    # --- sanity check against stable: warn only, never fail the sync ---
+    new_testing = load_packages(TESTING_FILE)
+    for norm, (raw, spec) in stable.items():
+        if norm not in new_testing:
+            if norm in auto_unstable:
+                continue  # deliberate exclusion, not staleness -- nothing to warn about
+            print(f"WARNING: {normalize_name(raw)} is in stable but missing from testing")
+            continue
+        stable_floor = version_tuple(parse_min_version(spec))
+        testing_floor = version_tuple(parse_min_version(new_testing[norm][1]))
+        if testing_floor < stable_floor:
+            print(
+                f"WARNING: {normalize_name(raw)} testing floor {'.'.join(map(str, testing_floor))} "
+                f"is below stable floor {'.'.join(map(str, stable_floor))}"
+            )
 
 
 if __name__ == "__main__":
