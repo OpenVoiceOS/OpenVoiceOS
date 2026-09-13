@@ -14,7 +14,7 @@ ovos_solver_failure_plugin
 # knowledge bases
 ovos-wolfram-alpha-solver
 ovos-wikipedia-solver
-ovos-ddg-solver-plugin
+ovos-ddg-plugin
 ovos-solver-bm25-plugin
 
 # rerankers
