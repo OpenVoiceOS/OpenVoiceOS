@@ -9,3 +9,9 @@ ovos-PHAL-plugin-mk1
 ovos-PHAL-plugin-hotkeys
 ovos-PHAL-plugin-mk2-fan-control
 #ovos-PHAL-plugin-termux
+ovos-phal-plugin-app-launcher
+ovos-phal-plugin-camera
+ovos-phal-plugin-dotstar
+ovos-phal-plugin-gpsd
+ovos-phal-plugin-pulseaudio
+ovos-phal-sensors
