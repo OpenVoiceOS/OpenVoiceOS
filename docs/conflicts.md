@@ -1,13 +1,13 @@
 # Package Conflict Report
 
-_Generated: 2026-09-14 15:45 UTC_
+_Generated: 2026-09-21 15:45 UTC_
 
 | | Count |
 |---|---:|
 | ✅ Conflicts resolved — re-run `make_alpha_testing.py` | 8 |
 | ❌ Conflicts still broken | 0 |
 | ⚠️ Python version restrictions | 2 |
-| 🔖 Missing stable release on PyPI | 23 |
+| 🔖 Missing stable release on PyPI | 24 |
 
 ---
 
@@ -38,7 +38,7 @@ Present in testing but excluded on newer Python via `; python_version < "X.Y"` m
 | Package | Alpha version | Supported | Excluded |
 |---------|:-------------:|-----------|----------|
 | `ovos-tts-plugin-nos` |  | 3.10, 3.11, 3.12, 3.13 | 3.14, 3.15 |
-| `ovos-ww-plugin-openwakeword` | 0.4.5a2 | 3.10, 3.11 | 3.12, 3.13, 3.14, 3.15 |
+| `ovos-ww-plugin-openwakeword` | 0.4.6a1 | 3.10, 3.11 | 3.12, 3.13, 3.14, 3.15 |
 
 ---
 
@@ -50,22 +50,23 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 | Package | Alpha version | Latest stable |
 |---------|:-------------:|:-------------:|
 | `hivemind-json-db-plugin` | 0.0.6a1 | 0.0.2 |
-| `hivemind-ovos-agent-plugin` | 0.4.2a1 | 0.1.0 |
+| `hivemind-ovos-agent-plugin` | 0.5.0a1 | 0.1.0 |
 | `hivemind-sqlite-database` | 0.4.3a9 | 0.2.1 |
-| `ovos-agentic-loop` | 0.2.3a2 | 0.1.0 |
+| `ovos-agentic-loop` | 0.2.3a3 | 0.1.0 |
 | `ovos-ddg-plugin` | 1.1.2a1 | — |
 | `ovos-google-translate-plugin` | 0.0.4a2 | — |
-| `ovos-lang-detector-classics-plugin` | 0.0.2a1 | — |
+| `ovos-lang-detector-classics-plugin` | 0.0.2a3 | — |
 | `ovos-media-classifier` | 0.2.1a1 | — |
 | `ovos-media-plugin-mplayer` | 0.2.1a1 | — |
+| `ovos-media-plugin-mpv` | 1.0.2a1 | — |
 | `ovos-media-plugin-qt5` | 0.1.0a2 | — |
 | `ovos-media-plugin-simple` | 0.1.0a1 | — |
 | `ovos-media-plugin-vlc` | 0.2.1a1 | — |
 | `ovos-option-matcher-fuzzy-plugin` | 0.0.2a1 | 0.0.1 |
-| `ovos-spec-tools` | 1.12.0a1 | — |
+| `ovos-spec-tools` | 1.13.0a1 | — |
 | `ovos-stt-plugin-azure` | 0.0.0a4 | — |
 | `ovos-stt-plugin-rover` | 0.1.0a2 | 0.0.1 |
-| `ovos-transcription-validator-plugin` | 0.1.2a3 | 0.1.0 |
+| `ovos-transcription-validator-plugin` | 0.1.3a1 | 0.1.0 |
 | `ovos-tts-plugin-beepspeak` | 0.1.0a2 | — |
 | `ovos-tts-plugin-matxa-multispeaker-cat` | 0.0.1a5 | — |
 | `ovos-wikipedia-plugin` | 1.1.2a1 | — |
@@ -80,70 +81,69 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 Exact versions uv would install for each constraints file (Python 3.10, transitive deps included).
 
 <details>
-<summary><strong>Alpha</strong> (constraints-alpha.txt) — 177 packages</summary>
+<summary><strong>Alpha</strong> (constraints-alpha.txt) — 176 packages</summary>
 
 | Package | Version |
 |---------|---------|
 | `hivemind-audio-binary-protocol` | 2.2.2a1 |
-| `hivemind-bus-client` | 1.1.9a1 |
-| `hivemind-core` | 5.2.2a1 |
+| `hivemind-bus-client` | 1.2.3a1 |
+| `hivemind-core` | 5.3.0a1 |
 | `hivemind-http-protocol` | 0.0.16a1 |
 | `hivemind-json-db-plugin` | 0.0.6a1 |
-| `hivemind-ovos-agent-plugin` | 0.4.2a1 |
-| `hivemind-plugin-manager` | 0.9.0a8 |
+| `hivemind-ovos-agent-plugin` | 0.5.0a1 |
+| `hivemind-plugin-manager` | 0.10.0a1 |
 | `hivemind-redis-database` | 0.1.1a8 |
 | `hivemind-sqlite-database` | 0.4.3a9 |
-| `hivemind-websocket-protocol` | 1.0.3a1 |
-| `ovos-adapt-parser` | 1.6.4a1 |
-| `ovos-agentic-loop` | 0.2.3a2 |
-| `ovos-audio` | 2.2.7a3 |
-| `ovos-audio-plugin-mpv` | 0.2.1 |
+| `hivemind-websocket-protocol` | 1.0.5a1 |
+| `ovos-adapt-parser` | 1.6.7a1 |
+| `ovos-agentic-loop` | 0.2.3a3 |
+| `ovos-audio` | 2.2.8a1 |
 | `ovos-audio-plugin-simple` | 0.1.4a3 |
-| `ovos-audio-transformer-plugin-speechbrain-langdetect` | 0.0.2a2 |
+| `ovos-audio-transformer-plugin-speechbrain-langdetect` | 0.0.3a1 |
 | `ovos-bidirectional-translation-plugin` | 0.1.4a2 |
-| `ovos-bus-client` | 2.11.16a1 |
+| `ovos-bus-client` | 2.11.18a1 |
 | `ovos-chromadb-embeddings-plugin` | 0.3.0a5 |
-| `ovos-color-parser` | 0.12.1a1 |
-| `ovos-common-query-pipeline-plugin` | 1.1.16a1 |
+| `ovos-color-parser` | 0.12.1a2 |
+| `ovos-common-query-pipeline-plugin` | 1.1.17a1 |
 | `ovos-config` | 2.3.11a2 |
 | `ovos-core` | 2.2.4a1 |
-| `ovos-date-parser` | 0.31.3a1 |
+| `ovos-date-parser` | 0.31.4a1 |
 | `ovos-ddg-plugin` | 1.1.2a1 |
-| `ovos-ddg-solver-plugin` | 0.0.2a3 |
 | `ovos-dialog-normalizer-plugin` | 0.0.3a2 |
-| `ovos-dinkum-listener` | 0.10.1a1 |
+| `ovos-dinkum-listener` | 0.10.5a1 |
 | `ovos-flashrank-reranker-plugin` | 0.0.0 |
 | `ovos-gguf-embeddings-plugin` | 0.0.0 |
 | `ovos-gguf-translate` | 0.0.2a2 |
 | `ovos-google-translate-plugin` | 0.0.4a2 |
 | `ovos-gui` | 1.5.2a1 |
 | `ovos-i2c-detection` | 0.0.6a2 |
-| `ovos-lang-detector-classics-plugin` | 0.0.2a1 |
+| `ovos-lang-detector-classics-plugin` | 0.0.2a3 |
 | `ovos-lang-detector-fasttext-plugin` | 0.1.3a4 |
 | `ovos-lang-parser` | 0.8.0a1 |
-| `ovos-m2v-pipeline` | 0.14.0a1 |
+| `ovos-m2v-pipeline` | 0.27.0a1 |
 | `ovos-mark1-utils` | 0.0.1 |
 | `ovos-media-classifier` | 0.2.1a1 |
 | `ovos-media-plugin-chromecast` | 0.1.5a1 |
 | `ovos-media-plugin-mplayer` | 0.2.1a1 |
+| `ovos-media-plugin-mpv` | 1.0.2a1 |
 | `ovos-media-plugin-qt5` | 0.1.0a2 |
 | `ovos-media-plugin-simple` | 0.1.0a1 |
 | `ovos-media-plugin-spotify` | 0.2.10a1 |
 | `ovos-media-plugin-vlc` | 0.2.1a1 |
-| `ovos-messagebus` | 0.2.1a4 |
+| `ovos-messagebus` | 0.2.1a5 |
 | `ovos-microphone-plugin-alsa` | 0.1.4a6 |
 | `ovos-microphone-plugin-files` | 0.0.2a9 |
 | `ovos-microphone-plugin-sounddevice` | 0.0.3a9 |
-| `ovos-number-parser` | 0.20.0a1 |
+| `ovos-number-parser` | 0.21.1a1 |
 | `ovos-ocp-files-plugin` | 0.13.2a3 |
 | `ovos-ocp-m3u-plugin` | 0.0.4a5 |
 | `ovos-ocp-news-plugin` | 0.1.4a1 |
-| `ovos-ocp-pipeline-plugin` | 1.5.0a1 |
+| `ovos-ocp-pipeline-plugin` | 1.5.0a2 |
 | `ovos-ocp-rss-plugin` | 0.1.3a6 |
 | `ovos-ocp-youtube-plugin` | 0.0.9a1 |
-| `ovos-openai-plugin` | 2.0.11a3 |
+| `ovos-openai-plugin` | 2.0.11a4 |
 | `ovos-option-matcher-fuzzy-plugin` | 0.0.2a1 |
-| `ovos-padatious` | 2.1.4a1 |
+| `ovos-padatious` | 2.2.5a1 |
 | `ovos-persona` | 0.9.0a25 |
 | `ovos-phal` | 0.3.1a1 |
 | `ovos-phal-plugin-alsa` | 0.1.9a1 |
@@ -153,79 +153,79 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-phal-plugin-mk1` | 0.2.0a1 |
 | `ovos-phal-plugin-mk2-fan-control` | 0.0.3a2 |
 | `ovos-phal-plugin-network-manager` | 1.3.7a2 |
-| `ovos-phal-plugin-oauth` | 0.1.7a2 |
+| `ovos-phal-plugin-oauth` | 0.1.7a3 |
 | `ovos-phal-plugin-system` | 1.3.8a2 |
 | `ovos-phal-plugin-wallpaper-manager` | 0.2.8a2 |
 | `ovos-plugin-common-play` | 1.3.5a1 |
-| `ovos-plugin-manager` | 2.12.2a1 |
+| `ovos-plugin-manager` | 2.12.4a1 |
 | `ovos-plugin-vlc` | 0.0.2 |
 | `ovos-simple-listener` | 0.3.2a2 |
-| `ovos-skill-alerts` | 0.6.1a2 |
-| `ovos-skill-application-launcher` | 0.9.2a2 |
+| `ovos-skill-alerts` | 0.6.2a1 |
+| `ovos-skill-application-launcher` | 0.13.2a1 |
 | `ovos-skill-audio-recording` | 0.2.11a1 |
-| `ovos-skill-boot-finished` | 0.6.1a1 |
-| `ovos-skill-camera` | 1.3.2a1 |
-| `ovos-skill-cmd` | 0.8.0a1 |
+| `ovos-skill-boot-finished` | 0.7.0a1 |
+| `ovos-skill-camera` | 1.3.2a2 |
+| `ovos-skill-cmd` | 0.8.6a1 |
 | `ovos-skill-color-picker` | 0.1.1a2 |
-| `ovos-skill-confucius-quotes` | 0.5.1a1 |
-| `ovos-skill-count` | 0.3.0a2 |
-| `ovos-skill-date-time` | 1.4.3a2 |
+| `ovos-skill-confucius-quotes` | 0.7.0a4 |
+| `ovos-skill-count` | 0.3.2a1 |
+| `ovos-skill-date-time` | 1.8.1a2 |
 | `ovos-skill-days-in-history` | 0.3.16a2 |
-| `ovos-skill-ddg` | 0.3.11a1 |
-| `ovos-skill-diagnostics` | 0.2.1a1 |
+| `ovos-skill-ddg` | 0.4.1a2 |
+| `ovos-skill-diagnostics` | 0.2.1a2 |
 | `ovos-skill-dictation` | 0.2.24a1 |
 | `ovos-skill-fallback-unknown` | 0.1.14a1 |
 | `ovos-skill-fuster-quotes` | 0.0.7a3 |
-| `ovos-skill-hello-world` | 0.4.0a1 |
+| `ovos-skill-hello-world` | 0.5.2a1 |
 | `ovos-skill-homescreen` | 3.0.4a2 |
-| `ovos-skill-icanhazdadjokes` | 0.4.1a2 |
-| `ovos-skill-ip` | 0.5.0a3 |
-| `ovos-skill-iss-location` | 0.4.2a2 |
+| `ovos-skill-icanhazdadjokes` | 0.25.1a1 |
+| `ovos-skill-ip` | 0.7.1a1 |
+| `ovos-skill-iss-location` | 0.7.0a3 |
 | `ovos-skill-laugh` | 1.1.4a1 |
 | `ovos-skill-local-media` | 0.2.16a1 |
-| `ovos-skill-moviemaster` | 0.1.2a3 |
+| `ovos-skill-moviemaster` | 0.3.0a3 |
 | `ovos-skill-naptime` | 0.4.0a6 |
 | `ovos-skill-news` | 0.4.10a4 |
-| `ovos-skill-number-facts` | 0.3.2a1 |
-| `ovos-skill-parrot` | 0.4.1a2 |
-| `ovos-skill-personal` | 1.0.0a1 |
+| `ovos-skill-number-facts` | 0.3.3a2 |
+| `ovos-skill-parrot` | 0.8.2a1 |
+| `ovos-skill-personal` | 1.0.2a1 |
 | `ovos-skill-pyradios` | 0.1.6a8 |
-| `ovos-skill-randomness` | 2.0.2a1 |
+| `ovos-skill-randomness` | 2.0.2a2 |
 | `ovos-skill-screenshot` | 0.0.10a5 |
 | `ovos-skill-somafm` | 0.1.6a9 |
-| `ovos-skill-speedtest` | 0.6.2a1 |
-| `ovos-skill-spelling` | 0.7.0a1 |
-| `ovos-skill-volume` | 0.5.2a1 |
+| `ovos-skill-speedtest` | 0.9.0a1 |
+| `ovos-skill-spelling` | 0.10.0a2 |
+| `ovos-skill-volume` | 0.11.0a1 |
 | `ovos-skill-wallpapers` | 1.0.16a1 |
-| `ovos-skill-weather` | 1.4.0a2 |
-| `ovos-skill-wikihow` | 0.4.5a1 |
+| `ovos-skill-weather` | 1.4.5a1 |
+| `ovos-skill-wikihow` | 0.7.1a2 |
 | `ovos-skill-wikipedia` | 0.10.0a1 |
 | `ovos-skill-wolfie` | 0.7.2a2 |
 | `ovos-skill-word-of-the-day` | 0.2.7a2 |
-| `ovos-skill-wordnet` | 0.8.1a1 |
+| `ovos-skill-wordnet` | 0.13.0a1 |
 | `ovos-skill-youtube-music` | 0.1.10a3 |
 | `ovos-solver-aiml-plugin` | 0.0.2a10 |
 | `ovos-solver-bm25-plugin` | 0.1.1a3 |
-| `ovos-solver-failure-plugin` | 0.0.6a2 |
+| `ovos-solver-failure-plugin` | 0.0.6a3 |
 | `ovos-solver-gguf-plugin` | 0.1.1a2 |
 | `ovos-solver-rivescript-plugin` | 0.1.1a2 |
-| `ovos-spec-tools` | 1.12.0a1 |
+| `ovos-spec-tools` | 1.13.0a1 |
 | `ovos-stt-plugin-azure` | 0.0.0a4 |
 | `ovos-stt-plugin-chromium` | 0.1.2 |
 | `ovos-stt-plugin-citrinet` | 0.1.1a12 |
 | `ovos-stt-plugin-fasterwhisper` | 0.4.1a6 |
 | `ovos-stt-plugin-mms` | 0.2.0 |
 | `ovos-stt-plugin-nos` | 0.2.0 |
-| `ovos-stt-plugin-onnx-asr` | 0.6.0a1 |
+| `ovos-stt-plugin-onnx-asr` | 0.6.0a2 |
 | `ovos-stt-plugin-rover` | 0.1.0a2 |
-| `ovos-stt-plugin-server` | 0.1.5a4 |
-| `ovos-stt-plugin-sherpa-onnx` | 0.0.2a2 |
+| `ovos-stt-plugin-server` | 0.1.5a5 |
+| `ovos-stt-plugin-sherpa-onnx` | 0.0.3a1 |
 | `ovos-stt-plugin-vosk` | 0.2.8a2 |
 | `ovos-stt-plugin-wav2vec` | 0.3.3a8 |
-| `ovos-stt-plugin-whisper` | 0.1.5a2 |
+| `ovos-stt-plugin-whisper` | 0.1.5a3 |
 | `ovos-stt-plugin-whisper-lm` | 0.0.6a11 |
 | `ovos-stt-plugin-whispercpp` | 0.0.2a2 |
-| `ovos-transcription-validator-plugin` | 0.1.2a3 |
+| `ovos-transcription-validator-plugin` | 0.1.3a1 |
 | `ovos-translate-plugin-nllb` | 0.0.3a1 |
 | `ovos-translate-server-plugin` | 0.0.8a3 |
 | `ovos-tts-plugin-ahotts` | 0.2.0a2 |
@@ -233,20 +233,20 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-tts-plugin-coqui` | 0.2.2a9 |
 | `ovos-tts-plugin-cotovia` | 0.5.0a2 |
 | `ovos-tts-plugin-edge-tts` | 0.3.2a2 |
-| `ovos-tts-plugin-espeakng` | 0.1.0a2 |
+| `ovos-tts-plugin-espeakng` | 0.1.0a4 |
 | `ovos-tts-plugin-google-tx` | 1.0.5a4 |
 | `ovos-tts-plugin-marytts` | 0.2.0a2 |
 | `ovos-tts-plugin-matxa-multispeaker-cat` | 0.0.1a5 |
-| `ovos-tts-plugin-mimic` | 0.4.0a2 |
+| `ovos-tts-plugin-mimic` | 0.4.1a1 |
 | `ovos-tts-plugin-pico` | 0.1.0a2 |
 | `ovos-tts-plugin-piper` | 0.2.6a2 |
 | `ovos-tts-plugin-polly` | 0.3.0a2 |
 | `ovos-tts-plugin-server` | 0.0.6a3 |
-| `ovos-utils` | 0.15.1a1 |
+| `ovos-utils` | 0.15.2a1 |
 | `ovos-utterance-corrections-plugin` | 0.1.3a6 |
 | `ovos-utterance-normalizer` | 0.2.5a2 |
 | `ovos-utterance-plugin-cancel` | 0.3.4a1 |
-| `ovos-vad-plugin-noise` | 0.1.3a7 |
+| `ovos-vad-plugin-noise` | 0.1.3a8 |
 | `ovos-vad-plugin-silero` | 0.1.3a2 |
 | `ovos-vad-plugin-webrtcvad` | 0.0.3a4 |
 | `ovos-wikipedia-plugin` | 1.1.2a1 |
@@ -255,7 +255,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-wolfram-alpha-solver` | 0.0.5a1 |
 | `ovos-wordnet-plugin` | 0.1.4a1 |
 | `ovos-workshop` | 8.3.0a1 |
-| `ovos-ww-plugin-openwakeword` | 0.4.5a2 |
+| `ovos-ww-plugin-openwakeword` | 0.4.6a1 |
 | `ovos-ww-plugin-precise-onnx` | 0.1.1a8 |
 | `ovos-ww-plugin-vosk` | 0.1.11a3 |
 | `ovos-yaml-editor` | 0.1.0a3 |
@@ -304,7 +304,7 @@ Exact versions uv would install for each constraints file (Python 3.10, transiti
 | `ovos-mark1-utils` | 0.0.1 |
 | `ovos-media-plugin-chromecast` | 0.1.3 |
 | `ovos-media-plugin-spotify` | 0.2.7 |
-| `ovos-messagebus` | 0.2.1a4 |
+| `ovos-messagebus` | 0.2.1a5 |
 | `ovos-microphone-plugin-alsa` | 0.1.3 |
 | `ovos-microphone-plugin-files` | 0.0.1 |
 | `ovos-microphone-plugin-sounddevice` | 0.0.2 |
