@@ -1,7 +1,5 @@
 ovos-tts-plugin-server
-ovos-tts-plugin-piper
 ovos-tts-plugin-edge-tts
-ovos-tts-plugin-matxa-multispeaker-cat
 ovos-tts-plugin-ahotts
 ovos-tts-plugin-cotovia
 ovos-tts-plugin-polly
@@ -20,3 +18,4 @@ chatterbox_onnx
 
 # below are deprecated
 #ovos-tts-plugin-nos  
+ovos-tts-plugin-sam
