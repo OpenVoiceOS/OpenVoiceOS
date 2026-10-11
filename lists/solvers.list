@@ -28,3 +28,9 @@ ovos-yes-no-plugin
 ovos-agentic-loop
 #ovos-MoS
 #ovos-tool-adapters
+ovos-gguf-plugin
+ovos-messagebus-chat-plugin
+ovos-solver-hivemind-plugin
+ovos-wikipedia-plugin
+ovos-wolfram-alpha-plugin
+ovos-wordnet-plugin
