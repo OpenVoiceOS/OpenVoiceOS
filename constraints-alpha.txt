@@ -1,5 +1,5 @@
 ovos-adapt-parser>=1.6.7a2
-ovos-agentic-loop>=0.2.3a3
+ovos-agentic-loop>=0.2.4a1
 ovos-audio>=2.2.8a3
 ovos-audio-plugin-simple>=0.1.4a3
 ovos-audio-transformer-plugin-speechbrain-langdetect>=0.0.3a1
