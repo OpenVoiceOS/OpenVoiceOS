@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-11-09 19:37 UTC_
+_Generated: 2026-11-16 19:23 UTC_
 
 | | Count |
 |---|---:|
@@ -49,9 +49,9 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 
 | Package | Alpha version | Latest stable |
 |---------|:-------------:|:-------------:|
-| `hivemind-json-db-plugin` | 0.0.6a1 | 0.0.2 |
-| `hivemind-ovos-agent-plugin` | 0.5.3a1 | 0.1.0 |
-| `hivemind-sqlite-database` | 0.4.3a9 | 0.2.1 |
+| `hivemind-json-db-plugin` | 0.0.7a2 | 0.0.2 |
+| `hivemind-ovos-agent-plugin` | 0.5.5a2 | 0.1.0 |
+| `hivemind-sqlite-database` | 0.4.3a11 | 0.2.1 |
 | `ovos-agentic-loop` | 0.2.5a1 | 0.1.0 |
 | `ovos-ddg-plugin` | 1.1.7a1 | — |
 | `ovos-google-translate-plugin` | 0.0.4a3 | — |
