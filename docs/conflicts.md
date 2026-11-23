@@ -1,6 +1,6 @@
 # Package Conflict Report
 
-_Generated: 2026-11-16 19:23 UTC_
+_Generated: 2026-11-23 20:58 UTC_
 
 | | Count |
 |---|---:|
@@ -62,14 +62,14 @@ Exist in alpha as a pre-release; absent from testing because no stable version i
 | `ovos-media-plugin-qt5` | 0.1.0a2 | — |
 | `ovos-media-plugin-simple` | 0.1.0a1 | — |
 | `ovos-media-plugin-vlc` | 0.2.1a1 | — |
-| `ovos-option-matcher-fuzzy-plugin` | 0.0.3a1 | 0.0.1 |
-| `ovos-spec-tools` | 1.17.1a1 | — |
+| `ovos-option-matcher-fuzzy-plugin` | 0.0.4a1 | 0.0.1 |
+| `ovos-spec-tools` | 1.17.1a2 | — |
 | `ovos-stt-plugin-azure` | 0.0.0a4 | — |
 | `ovos-stt-plugin-rover` | 0.1.0a3 | 0.0.1 |
 | `ovos-transcription-validator-plugin` | 0.1.4a1 | 0.1.0 |
 | `ovos-tts-plugin-beepspeak` | 0.1.1a1 | — |
 | `ovos-tts-plugin-matxa-multispeaker-cat` | 0.0.1a5 | — |
-| `ovos-wikipedia-plugin` | 1.1.2a4 | — |
+| `ovos-wikipedia-plugin` | 1.1.2a5 | — |
 | `ovos-wolfram-alpha-plugin` | 1.1.5a1 | — |
 | `ovos-wordnet-plugin` | 0.1.7a1 | 0.1.0 |
 | `ovos-yes-no-plugin` | 0.4.1a1 | 0.3.0 |
