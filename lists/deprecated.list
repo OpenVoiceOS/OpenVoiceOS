@@ -4,3 +4,6 @@ ovos-ww-plugin-precise-lite
 ovos-solver-yes-no-plugin
 ovos-PHAL-plugin-wifi-setup
 ovos-gui-plugin-shell-companion
+ovos-wolfram-alpha-solver
+ovos-wikipedia-solver
+ovos-ddg-solver-plugin

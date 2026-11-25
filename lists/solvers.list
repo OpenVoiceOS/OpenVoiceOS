@@ -12,8 +12,9 @@ ovos-solver-aiml-plugin
 ovos_solver_failure_plugin
 
 # knowledge bases
-ovos-wolfram-alpha-solver
-ovos-wikipedia-solver
+ovos-wolfram-alpha-plugin
+ovos-wikipedia-plugin
+ovos-wordnet-plugin
 ovos-ddg-plugin
 ovos-solver-bm25-plugin
 
