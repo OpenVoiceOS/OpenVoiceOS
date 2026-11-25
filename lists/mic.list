@@ -1,3 +1,4 @@
 ovos-microphone-plugin-sounddevice
 ovos-microphone-plugin-alsa
 ovos_microphone_plugin_files
+ovos-microphone-plugin-pyaudio

@@ -1,3 +1,5 @@
 ovos-ww-plugin-vosk
 ovos_ww_plugin_precise_onnx
 ovos-ww-plugin-openWakeWord; python_version<='3.11'
+ovos-ww-plugin-microwakeword
+ovos-ww-verifier-plugin-speaker
